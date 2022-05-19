@@ -16,7 +16,6 @@ const Login = () => {
     <form onSubmit={handleSubmit(loginUser)}>
       <input {...register("email")} name="email" type="text" placeholder="email"/>
       <input {...register("pass1")} name="pass1" type="text" placeholder="password"/>
-      <input {...register("pass2")} name="pass2" type="text" placeholder="repeat password"/>
       <input type="submit" value="Enviar" />
     </form>
   )
