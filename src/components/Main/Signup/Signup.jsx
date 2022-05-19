@@ -6,7 +6,6 @@ const Signup = () => {
   const { register, handleSubmit } = useForm();
   
   const signUpUser = async (create) =>{
-    console.log(create);  
     try {
       const res = await axios.post("http://localhost:5000/api/users/create", create);
       const data = res.data;
@@ -15,6 +14,7 @@ const Signup = () => {
       console.log(error);
     }
   }
+  
   return (
     <form onSubmit={handleSubmit(signUpUser)}>
       <input {...register("name")} name="name" type="text" placeholder="Nombre"/>
