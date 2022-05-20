@@ -1,11 +1,10 @@
 import React, {useState, useEffect} from "react";
-import { useForm } from "react-hook-form";
 import axios from "axios";
 import BlogCard from '../Blog/BlogCard'
 
 
 const Blog = () => {
-  // const { register, handleSubmit } = useForm();
+ 
   const [entries, setEntries] = useState([]);
 
 
@@ -28,13 +27,7 @@ const Blog = () => {
       <div className="entries_container">
         {entries.map((entry, i) => <BlogCard value={entry} key={i} />)}
       </div>
-      <div  className="form_container">
-        {/* <form onSubmit={handleSubmit()} className='form' >
-          <input  {...register("title")} type="text" name="title" id="title" placeholder="Titulo del Blog"/>
-          <textarea  {...register("content")} name="content" id="content" cols="30" rows="10" placeholder="Blog content"/>
-          <input type="submit" value="Enviar" />
-        </form> */}
-      </div>
+ 
   </section>
   )
   
