@@ -11,7 +11,7 @@ const Blog = () => {
   useEffect(() => {
     async function getAllentries() {
       try {
-        const res = await axios.get("http://localhost:5000/api/users/blog");
+        const res = await axios.get("http://localhost:5000/api/blog");
         const data = res.data;
         setEntries(data)
       } catch (error) {
