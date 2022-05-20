@@ -3,14 +3,14 @@ import { useForm } from "react-hook-form";
 import axios from "axios";
 
 const Dashboard = () => {
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, reset} = useForm();
 
   const createEntry = async (create) => {
     console.log('funcion front createEntry');
     try {
-      const res = await axios.post("http://localhost:5000/api/dashboard/blog/create", create);
-      const data = res.data;
-      console.log(data);
+      await axios.post("http://localhost:5000/api/dashboard/blog/create", create);
+      reset()
+      
     } catch (error) {
       console.log(error);
     }
