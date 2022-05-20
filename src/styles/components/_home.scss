@@ -14,6 +14,12 @@
     cursor: pointer;
 }
 
+input[type=text], input[type=password]{
+    background: #EBEBEB;
+    border-radius: 8px;
+    height: 48px;
+}
+
 #art1{
     display: flex;
     flex-direction: row-reverse;

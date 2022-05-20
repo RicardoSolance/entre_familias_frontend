@@ -5,5 +5,23 @@ form{
     align-content: center;
     justify-content: center;
     align-items: center;
+    height: 704px;
+    width: 472px;
+    background-color: #E5E5E5;
+    text-align: center;
+}
 
+form>img{
+    height: 51px;
+    width: 58px;
+}
+
+form>button{
+    margin: 20px 0;
+}
+
+form>.secondBtn{
+    width: 398px;
+    height: 72px;
+    text-decoration: none;
 }
