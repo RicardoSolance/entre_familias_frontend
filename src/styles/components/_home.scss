@@ -47,7 +47,7 @@ input[type=text], input[type=password]{
 }
 
 #art2>img{
-    width: 95%;
+    width: 70%;
 }
 
 #art3{
@@ -94,4 +94,95 @@ input[type=text], input[type=password]{
     font-weight: 600;
     cursor: pointer;
 
+}
+
+#art4{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 50px;
+}
+
+#art4>div{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#art5{
+    margin: 100px 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#art5>img{
+    margin: 0 30px;
+}
+
+#art5>div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#art6{
+    margin: 100px 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center; 
+}
+
+#art6>img{
+    margin: 0 30px;
+}
+
+#art6>div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#art7{
+    margin: 100px 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center; 
+}
+
+#art7>img{
+    margin: 0 30px;
+}
+
+#art7>div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#art7>div>#secondBtn{
+    width: 171px;
 }
