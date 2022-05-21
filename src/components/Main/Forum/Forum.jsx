@@ -13,7 +13,7 @@ const Forum = () => {
       description: e.target.description.value,
     };
     console.log(questionform);
-    const token=localStorage.getItem("token");
+    const token=sessionStorage.getItem("token");
     console.log(token);
 
     const config = {
@@ -30,7 +30,7 @@ const Forum = () => {
       );
       // const data=res.data
       // console.log(data);
-      // setquestion(question);
+      //  setquestion(res);
     }
     catch(error){
   console.log(error);
