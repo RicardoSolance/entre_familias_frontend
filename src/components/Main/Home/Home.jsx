@@ -1,5 +1,5 @@
-import React from "react";
-import logoGrande from "../../../assets/logoGrande.png";
+import React, { useRef } from "react";
+// import logoGrande from "../../../assets/logoGrande.png";
 import imagenes from "../../../assets/imagenes.png";
 import imgEj from "../../../assets/imagen-ej.png";
 import img10 from "../../../assets/img10.png";
@@ -9,7 +9,9 @@ import img12 from "../../../assets/img12.png";
 import familias from "../../../assets/familias.png";
 import imgText from "../../../assets/imgText.png";
 
+
 const Home = () => {
+
 
   
   return (
