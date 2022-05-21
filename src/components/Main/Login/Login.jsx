@@ -11,6 +11,8 @@ const Login = () => {
     const res = await axios.post("http://localhost:5000/api/users/login",log);
     const data = res.data;
     console.log(data);
+    localStorage.setItem("token",data.token);
+
     if(data.message==='Correct credentials'){
       setisLogged(true);
     }
