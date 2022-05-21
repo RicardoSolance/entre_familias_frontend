@@ -5,9 +5,9 @@ const Footer = () => {
   return (
     <footer>
       <div id="footer1">
-        <a href="">Aviso Legal</a>
-        <a href="">Política de Privacidad</a>
-        <a href="">Política de cookies</a>
+        <a>Aviso Legal</a>
+        <a>Política de Privacidad</a>
+        <a>Política de cookies</a>
       </div>
       <div id="footer2">
         <img src={colaboradores} alt="colaboradores" />

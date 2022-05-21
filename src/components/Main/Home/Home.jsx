@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 // import logoGrande from "../../../assets/logoGrande.png";
 import imagenes from "../../../assets/imagenes.png";
 import imgEj from "../../../assets/imagen-ej.png";
