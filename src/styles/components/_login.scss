@@ -1,4 +1,4 @@
-form{
+.formPopup{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -11,16 +11,16 @@ form{
     text-align: center;
 }
 
-form>img{
+.formPopup>img{
     height: 51px;
     width: 58px;
 }
 
-form>button{
+.formPopup>button{
     margin: 20px 0;
 }
 
-form>.secondBtn{
+.formPopup>.secondBtn{
     width: 398px;
     height: 72px;
     text-decoration: none;
