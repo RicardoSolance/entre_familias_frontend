@@ -8,6 +8,7 @@ import img8 from "../../../assets/img8.png";
 import img12 from "../../../assets/img12.png";
 import familias from "../../../assets/familias.png";
 import imgText from "../../../assets/imgText.png";
+import { Link } from "react-router-dom";
 
 
 const Home = () => {
@@ -21,7 +22,7 @@ const Home = () => {
         <div>
           <h1>Entre Familias</h1>
           <p>Ayudamos a familias de acogida en el proceso de adaptación del niño en el hogar. Todos nos hemos sentido solos, es el momento de unirse.</p>
-          <button className="mainBtn">¡Te estamos esperando!</button>
+          <button className="mainBtn"><Link to="/maintenance">¡Te estamos esperando!</Link></button>
         </div>
       </article>
       <article id="art2">
@@ -35,7 +36,7 @@ const Home = () => {
           <div>
             <h2>Foro para familias de acogida</h2>
             <p>Tus problemas no son únicos, y la mejor ayuda te la brindan familias como la tuya.</p>
-            <button className="secondBtn">Ver Listado</button>
+            <button className="secondBtn"><Link to="/forum">Foro</Link></button>
           </div>
         </div>
       </article>
@@ -43,7 +44,7 @@ const Home = () => {
         <div>
           <h2>Contacta directamente con profesionales y voluntarios</h2>
           <p>Psicólogos, trabajadores y educadores sociales, pedagogos... El mejor equipo está a tu disposición.</p>
-          <button className="secondBtn">Conócelos</button>
+          <button className="secondBtn"><Link to="/maintenance">Conócelos</Link></button>
         </div>
         <img src={img10} alt="img 10" />
       </article>
@@ -52,14 +53,14 @@ const Home = () => {
         <div>
           <h2>Chat 24h</h2>
           <p>Ten acceso a un acompañamiento 24h los 365 dias del año.</p>
-          <button className="secondBtn">Chatea</button>
+          <button className="secondBtn"><Link to="/maintenance">Chatea</Link></button>
         </div>
       </article>
       <article id="art6">
         <div>
           <h2>Más información</h2>
           <p>Resuelve todas tus dudas sobre “Entre Familias” o sobre el acogimiento familiar.</p>
-          <button className="secondBtn">Accede</button>
+          <button className="secondBtn"><Link to="/maintenance">Accede</Link></button>
         </div>
         <img src={img8} alt="img8" />
       </article>
@@ -79,7 +80,7 @@ const Home = () => {
       <article id="art9">
         <h2>No necesitas ser una familia de acogida para colaborar.</h2>
         <h4>Se parte de nuestro equipo de voluntariados</h4>
-        <button className="mainBtn">¡Conoce las formas de ayudar!</button>
+        <button className="mainBtn"><Link to="/maintenance">¡Conoce las formas de ayudar!</Link></button>
       </article>
     </div>
   )

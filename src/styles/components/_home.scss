@@ -14,6 +14,11 @@
     cursor: pointer;
 }
 
+.mainBtn>a{
+    color: white;
+}
+
+
 article{
 
     width: 100%;
@@ -103,6 +108,10 @@ input[type=text], input[type=password]{
     align-items: flex-start;
 }
 
+#art3>div>div>p{
+    text-align: initial;
+}
+
 .secondBtn{
     box-sizing: border-box;
     display: flex;
@@ -119,7 +128,10 @@ input[type=text], input[type=password]{
     font-size: 24px;
     font-weight: 600;
     cursor: pointer;
+}
 
+.secondBtn>a{
+    color: #8A25DF;
 }
 
 #art4{
@@ -179,7 +191,7 @@ input[type=text], input[type=password]{
 }
 
 #art6>img{
-    margin: 0 30px;
+    margin: 20px 30px;
 }
 
 #art6>div{

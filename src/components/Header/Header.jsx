@@ -24,7 +24,7 @@ const Header = () => {
   return (
     <header>
       <div id="divLogos">
-        <img src={voluntariadoLogo} alt="voluntariado logo"/>
+      <Link to="/maintenance"><img src={voluntariadoLogo} alt="voluntariado logo"/></Link>
         <Popup trigger={<img src={loginLogo} alt="login logo"/>} position="left top">
           <form className="formPopup" onSubmit={handleSubmit(loginUser)}>
             <img src={logoGrande} alt="logoGrande" />
