@@ -26,10 +26,7 @@ const [inputname, setSearchName] = useState([]);
       
    
         <p>Comentarios:{commentdata.answer}</p>
-        <form className="row" >
-          <input placeholder="Agregar comentario" name="nombre" />
-          <button  type="submit" ></button>
-        </form>
+     
    
 
 

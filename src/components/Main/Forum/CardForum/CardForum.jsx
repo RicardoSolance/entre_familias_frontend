@@ -19,6 +19,7 @@ const listadodata = props.listadodata
         <p>Topico:{listadodata.Topic}</p>
         <p>Descripcion:{listadodata.description}</p>
         <p>Name:{listadodata.postedBy.name}</p>
+        
         {/* <p>Mail:{listadodata.postedBy.email}</p> */}
         <>
     
@@ -26,7 +27,10 @@ const listadodata = props.listadodata
           ? listadodata.comments.map((comment, i) => <Comment key={i} commentdata={comment} />)
           : ""}
     </>
-
+    <form className="row" >
+          <input placeholder="Agregar comentario" name="nombre" />
+          <button  type="submit" ></button>
+        </form>
       </div>
       
    
