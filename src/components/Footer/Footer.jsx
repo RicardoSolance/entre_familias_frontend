@@ -7,8 +7,8 @@ const Footer = () => {
     <footer>
       <div id="footer1">
         <a>Aviso Legal</a>
-        <Link to="/privacy">Política de Privacidad</Link>
-        <Link to="/cookies">Política de cookies</Link>
+        <Link onClick={()=>window.scrollTo(0,0)} to="/privacy">Política de Privacidad</Link>
+        <Link onClick={()=>window.scrollTo(0,0)} to="/cookies">Política de cookies</Link>
       </div>
       <div id="footer2">
         <img src={colaboradores} alt="colaboradores" />
