@@ -5,16 +5,16 @@ import { useForm } from "react-hook-form";
 const Signup = () => {
   const { register, handleSubmit } = useForm();
   
-  const signUpUser = async (create) =>{
-    console.log(create);
+  const signUpUser = async (entry) =>{
     try {
-      const res = axios.post("http://localhost:5000/api/users/create", create);
+      const res = await axios.post("http://localhost:5000/api/users/create", entry);
       const data = res.data;
       console.log(data);
     } catch (error) {
       console.log(error);
     }
   }
+  
   return (
     <form onSubmit={handleSubmit(signUpUser)}>
       <input {...register("name")} name="name" type="text" placeholder="Nombre"/>
@@ -26,8 +26,8 @@ const Signup = () => {
       <input {...register("birthday")} name="birthday" type="date" placeholder="Cumpleaños"/>
       <input {...register("telephone")} name="telephone" type="text" placeholder="Teléfono"/>
       <input {...register("email")} name="email" type="text" placeholder="email"/>
-      <input {...register("pass1")} name="pass1" type="text" placeholder="password"/>
-      <input {...register("pass2")} name="pass2" type="text" placeholder="repeat password"/>
+      <input {...register("pass1")} name="pass1" type="password" placeholder="password"/>
+      <input {...register("pass2")} name="pass2" type="password" placeholder="repeat password"/>
       <input type="submit" value="Enviar" />
     </form>
   )
