@@ -26,7 +26,7 @@ const Header = () => {
       <div id="divLogos">
         <img src={voluntariadoLogo} alt="voluntariado logo"/>
         <Popup trigger={<img src={loginLogo} alt="login logo"/>} position="left top">
-          <form onSubmit={handleSubmit(loginUser)}>
+          <form className="formPopup" onSubmit={handleSubmit(loginUser)}>
             <img src={logoGrande} alt="logoGrande" />
             <h2>Empezar</h2>
             <p>Unete a nuestra comunidad y conecta con familias, profesionales y voluntarios.</p>

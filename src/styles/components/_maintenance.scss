@@ -1,0 +1,46 @@
+#divMantenimiento{
+    display: flex;
+    width: 100%;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+#divMantenimiento>div{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#divMantenimiento>div>*{
+    margin: 30px 0;
+    max-width: 675px;
+}
+
+#divMantenimiento>div>form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+#divMantenimiento>div>form>*{
+    margin: 10px 0;
+}
+
+@media only screen and (max-width: 1292px){
+    #divMantenimiento>div{
+        width: 100%;
+    }
+    #divMantenimiento>img{
+        width: 100%;
+    }
+}
