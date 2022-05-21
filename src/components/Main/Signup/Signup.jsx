@@ -5,9 +5,9 @@ import { useForm } from "react-hook-form";
 const Signup = () => {
   const { register, handleSubmit } = useForm();
   
-  const signUpUser = async (create) =>{
+  const signUpUser = async (entry) =>{
     try {
-      const res = await axios.post("http://localhost:5000/api/users/create", create);
+      const res = await axios.post("http://localhost:5000/api/users/create", entry);
       const data = res.data;
       console.log(data);
     } catch (error) {

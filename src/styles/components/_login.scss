@@ -1,9 +1,27 @@
-form{
+.formPopup{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
     align-items: center;
+    height: 704px;
+    width: 472px;
+    background-color: #E5E5E5;
+    text-align: center;
+}
 
+.formPopup>img{
+    height: 51px;
+    width: 58px;
+}
+
+.formPopup>button{
+    margin: 20px 0;
+}
+
+.formPopup>.secondBtn{
+    width: 398px;
+    height: 72px;
+    text-decoration: none;
 }

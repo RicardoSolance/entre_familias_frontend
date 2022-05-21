@@ -8,7 +8,7 @@ const Login = () => {
 
   const loginUser = async(log)=>{
     setisLogged(false)
-    const res = await axios.post("https://entre-familias-backend.herokuapp.com/api/users/login",log);
+    const res = await axios.post("http://localhost:5000/api/users/login",log);
     const data = res.data;
     console.log(data);
     if(data.message==='Correct credentials'){

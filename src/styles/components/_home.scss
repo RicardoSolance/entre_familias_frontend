@@ -1,0 +1,259 @@
+.mainBtn{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 32px;
+    background: #8A25DF;
+    border-radius: 48px;
+    color: white;
+    border: none;
+    width: 398px;
+    height: 72px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.mainBtn>a{
+    color: white;
+}
+
+
+article{
+
+    width: 100%;
+}
+
+input[type=text], input[type=password]{
+    background: #EBEBEB;
+    border-radius: 8px;
+    height: 48px;
+}
+
+#art1{
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+    // margin-bottom: 100px;
+    height: 920px;
+}
+
+#art1>img{
+    height: 430px;
+    width: 1900px;
+}
+
+#art1>div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    width: 50%;
+}
+
+#art1>div>h1{
+    font-size: 64px;
+    margin: 10px;
+    flex-wrap: nowrap;
+}
+
+#art2{
+    background-color: #FAFAFA;
+    height: 448px;
+}
+
+#art2:first-child, #art2:last-child{
+    margin: 70px;
+}
+
+#art2>img{
+    width: 70%;
+}
+
+#art3{
+    // margin: 40px 0;
+    height: 920px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#art3>h1{
+    margin: 70px;
+}
+
+#art3>div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+#art3>div>img{
+    width: 40%;
+}
+#art3>div>div{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#art3>div>div>p{
+    text-align: initial;
+}
+
+.secondBtn{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 32px;
+    gap: 8px;
+    width: 216px;
+    height: 48px;
+    border: 3px solid #8A25DF;
+    border-radius: 48px;
+    color: #8A25DF;
+    font-size: 24px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.secondBtn>a{
+    color: #8A25DF;
+}
+
+#art4{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    // margin: 100px 0px;
+    background-color: #FAFAFA;
+    height: 600px;
+}
+
+#art4>div{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#art5{
+    // margin: 100px 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+}
+
+#art5>img{
+    margin: 0 30px;
+}
+
+#art5>div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#art6{
+    // margin: 100px 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center; 
+    background-color: #FAFAFA;
+    height: 600px;
+}
+
+#art6>img{
+    margin: 20px 30px;
+}
+
+#art6>div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#art7{
+    // margin: 100px 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center; 
+    height: 600px;
+}
+
+#art7>img{
+    margin: 0 30px;
+}
+
+#art7>div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#art7>div>button{
+    width: 255px;
+}
+
+#art8{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #FAFAFA;
+    // margin-bottom: 100px;
+    height: 700px;
+}
+
+#art9{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    // margin-bottom: 100px;
+    height: 544px;
+}
+
+#art9>button{
+    width: 468px;
+}
