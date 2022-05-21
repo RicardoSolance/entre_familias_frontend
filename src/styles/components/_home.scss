@@ -14,6 +14,11 @@
     cursor: pointer;
 }
 
+article{
+
+    width: 100%;
+}
+
 input[type=text], input[type=password]{
     background: #EBEBEB;
     border-radius: 8px;
@@ -22,17 +27,26 @@ input[type=text], input[type=password]{
 
 #art1{
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: column-reverse;
     flex-wrap: wrap;
     align-content: center;
     justify-content: space-around;
     align-items: center;
+    // margin-bottom: 100px;
+    height: 920px;
+}
 
+#art1>img{
+    height: 430px;
+    width: 1900px;
 }
 
 #art1>div{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
     width: 50%;
 }
 
@@ -40,6 +54,11 @@ input[type=text], input[type=password]{
     font-size: 64px;
     margin: 10px;
     flex-wrap: nowrap;
+}
+
+#art2{
+    background-color: #FAFAFA;
+    height: 448px;
 }
 
 #art2:first-child, #art2:last-child{
@@ -51,7 +70,14 @@ input[type=text], input[type=password]{
 }
 
 #art3{
-    margin: 40px 0;
+    // margin: 40px 0;
+    height: 920px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
 }
 
 #art3>h1{
@@ -103,7 +129,9 @@ input[type=text], input[type=password]{
     align-content: center;
     justify-content: center;
     align-items: center;
-    margin: 100px 50px;
+    // margin: 100px 0px;
+    background-color: #FAFAFA;
+    height: 600px;
 }
 
 #art4>div{
@@ -115,13 +143,14 @@ input[type=text], input[type=password]{
 }
 
 #art5{
-    margin: 100px 50px;
+    // margin: 100px 0px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
     align-items: center;
+    height: 600px;
 }
 
 #art5>img{
@@ -138,13 +167,15 @@ input[type=text], input[type=password]{
 }
 
 #art6{
-    margin: 100px 20px;
+    // margin: 100px 0px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
     align-items: center; 
+    background-color: #FAFAFA;
+    height: 600px;
 }
 
 #art6>img{
@@ -161,13 +192,14 @@ input[type=text], input[type=password]{
 }
 
 #art7{
-    margin: 100px 20px;
+    // margin: 100px 0px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
     align-items: center; 
+    height: 600px;
 }
 
 #art7>img{
@@ -183,6 +215,33 @@ input[type=text], input[type=password]{
     flex-wrap: wrap;
 }
 
-#art7>div>#secondBtn{
-    width: 171px;
+#art7>div>button{
+    width: 255px;
+}
+
+#art8{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #FAFAFA;
+    // margin-bottom: 100px;
+    height: 700px;
+}
+
+#art9{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    // margin-bottom: 100px;
+    height: 544px;
+}
+
+#art9>button{
+    width: 468px;
 }

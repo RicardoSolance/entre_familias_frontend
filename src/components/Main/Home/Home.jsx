@@ -6,12 +6,16 @@ import img10 from "../../../assets/img10.png";
 import chatbotImg from "../../../assets/chatbot.png";
 import img8 from "../../../assets/img8.png";
 import img12 from "../../../assets/img12.png";
+import familias from "../../../assets/familias.png";
+import imgText from "../../../assets/imgText.png";
 
 const Home = () => {
+
+  
   return (
     <div>
       <article id="art1">
-        <img src={logoGrande} alt="logo grande"/>
+        <img src={familias} alt="familias"/>
         <div>
           <h1>Entre Familias</h1>
           <p>Ayudamos a familias de acogida en el proceso de adaptación del niño en el hogar. Todos nos hemos sentido solos, es el momento de unirse.</p>
@@ -64,6 +68,16 @@ const Home = () => {
           <p>Gestiona y visualiza toda la información sobre tu familia y tu actividad en la comunidad</p>
           <button className="secondBtn">Crea tu perfil</button>
         </div>
+      </article>
+      <article id="art8">
+        <h3>Testimonios</h3>
+        <img src={imgText} alt="imagen + text" />
+        <p>Me llamo Luis, hace 2 meses que adopte a un niño permanentemente. Fue un proceso algo complicado pero gracias al foro de preguntas pude resolver todas mis dudas y comprobar que no soy el único que pasa por esta fase. Hablar con otras familias de sus problemas y de los mios me hizo sentirme más cómodo y comprender que no estoy solo. Gracias por ofrecernos este servicio y espero que pueda ayudar a más familisas como me ayudaron a mí. </p>
+      </article>
+      <article id="art9">
+        <h2>No necesitas ser una familia de acogida para colaborar.</h2>
+        <h4>Se parte de nuestro equipo de voluntariados</h4>
+        <button className="mainBtn">¡Conoce las formas de ayudar!</button>
       </article>
     </div>
   )
