@@ -35,3 +35,26 @@ footer{
 #footer2 *{
     margin: 0 30px;
 }
+
+@media only screen and (max-width: 555px){
+    #footer1{
+        display: flex;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #footer2{
+        display: flex;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
