@@ -40,4 +40,13 @@
             }
         }
     }
+    & > form{
+        width: 100%;
+        & > .profile-data-1{
+            width: 100%;
+            height: 25.625rem;
+            background-color: $color-4;
+        }
+
+    }
 }

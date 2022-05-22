@@ -9,8 +9,10 @@ const Profile = () => {
           tu familia y al tenerlo podrás utilizar el resto de herramientas
           y contenidos exclusivos para familias.</p>
       </div>
+      </div>
 
-      <form action="">
+    <form action="">
+    
         <div className="profile-data-1">
           
           <h2>1. Datos Personales</h2>
@@ -220,7 +222,7 @@ const Profile = () => {
         
       </form>
      
-    </div>
+   
   </main>;
 };
 
