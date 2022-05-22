@@ -56,7 +56,7 @@ const Forum = () => {
   }, []);
 
   return !isLoading ? (
-    <div className="listaneas">
+    <div className="listaForum">
       <>
         {datasforo.length !== 0
           ? datasforo.map((dataforo, i) => (
