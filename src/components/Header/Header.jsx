@@ -65,6 +65,7 @@ const Header = () => {
 
   const handleOpen3 = () =>{
     if (user) {
+      console.log("entra aquí");
       setOpen3(true);
     }
   }
@@ -123,9 +124,9 @@ const Header = () => {
               <label htmlFor="pass2">Repite la contraseña*</label>
               <input {...register("pass2")} name="pass2" type="password" required />
               <label htmlFor="birthday">Fecha de nacimiento*</label>
-              <input {...register("birthday")} type="date" name="birthday" />
+              <input {...register("birthday")} type="date" name="birthday" required/>
               <div>
-                <input type="checkbox" name="privacity" />
+                <input type="checkbox" name="privacity" required/>
                 <p>Confirmo que he leído la política de privacidad de Entre Familias y doy mi consentimiento para el tratamiento de mis datos personales</p>
               </div>
               {passWeak ? <Alert severity="error">La contraseña debe contener mayúsculas, minúsculas, un número y un símbolo.</Alert> : ""}
