@@ -13,7 +13,7 @@ const Forum = () => {
       description: e.target.description.value,
     };
     console.log(questionform);
-    const token=sessionStorage.getItem("token");
+    const token=localStorage.getItem("token");
     console.log(token);
 
     const config = {
@@ -30,7 +30,7 @@ const Forum = () => {
       );
       // const data=res.data
       // console.log(data);
-      //  setquestion(res);
+      setquestion(res);
     }
     catch(error){
   console.log(error);
@@ -53,7 +53,7 @@ const Forum = () => {
     };
 
     fetchData();
-  }, []);
+  }, [questionpost]);
 
   return !isLoading ? (
     <div className="listaneas">

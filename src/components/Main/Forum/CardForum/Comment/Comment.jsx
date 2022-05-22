@@ -9,7 +9,7 @@ function Comment(props) {
 const commentdata= props.commentdata
 const [inputname, setSearchName] = useState([]);
 
-
+console.log(commentdata);
 // const onSubmit = (e) => {
 //   e.preventDefault();
 //   if(e.target.nombre.value){
@@ -24,9 +24,10 @@ const [inputname, setSearchName] = useState([]);
     <div className="card">
        
       
-   
-        <p>Comentarios:{commentdata.answer}</p>
-     
+          <p>Comentarios:{commentdata.answer}</p>
+          <p>Time:{commentdata.time}</p>
+        {/* <p>Comentarios:{commentdata.postedBy.name}</p> */}
+        
    
 
 
