@@ -14,16 +14,16 @@
     cursor: pointer;
 }
 
+.mainBtn>a{
+    color: white;
+}
+
+
 article{
 
     width: 100%;
 }
 
-input[type=text], input[type=password]{
-    background: #EBEBEB;
-    border-radius: 8px;
-    height: 48px;
-}
 
 #art1{
     display: flex;
@@ -103,6 +103,10 @@ input[type=text], input[type=password]{
     align-items: flex-start;
 }
 
+#art3>div>div>p{
+    text-align: initial;
+}
+
 .secondBtn{
     box-sizing: border-box;
     display: flex;
@@ -119,7 +123,10 @@ input[type=text], input[type=password]{
     font-size: 24px;
     font-weight: 600;
     cursor: pointer;
+}
 
+.secondBtn>a{
+    color: #8A25DF;
 }
 
 #art4{
@@ -179,7 +186,7 @@ input[type=text], input[type=password]{
 }
 
 #art6>img{
-    margin: 0 30px;
+    margin: 20px 30px;
 }
 
 #art6>div{
@@ -230,6 +237,9 @@ input[type=text], input[type=password]{
     // margin-bottom: 100px;
     height: 700px;
 }
+#art8>p{
+    width: 80%;
+}
 
 #art9{
     display: flex;
@@ -245,3 +255,40 @@ input[type=text], input[type=password]{
 #art9>button{
     width: 468px;
 }
+
+
+@media only screen and (max-width: 900px){
+    #art1>img{
+        width: 1000px;
+    }
+    #art2>img{
+        height: 150px;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+
+    #art3>div>img{
+        width: 495px;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #art4{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
+}
+

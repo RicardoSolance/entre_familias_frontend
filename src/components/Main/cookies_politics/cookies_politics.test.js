@@ -1,10 +1,10 @@
 import React from "react";
 import { shallow } from "enzyme";
-import Signup from "./Signup";
+import Cookies_politics from "./cookies_politics";
 
-describe("Signup", () => {
+describe("Cookies_politics", () => {
   test("matches snapshot", () => {
-    const wrapper = shallow(<Signup />);
+    const wrapper = shallow(<Cookies_politics />);
     expect(wrapper).toMatchSnapshot();
   });
 });
