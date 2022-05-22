@@ -1,0 +1,43 @@
+@import '../utils/variables.scss';
+
+.profile-main{
+    width: 100vw;
+    margin: 0;
+    // background-color: blue;
+    background-image: url('../../assets/bg.png');
+    background-size: 360px;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-position-x: 97.5%;
+    background-position-y: -40%;
+    & > .profile-main-container{
+        width: 80%;
+        height: auto;
+        margin-inline: auto;
+        margin-top: 0;
+        // background-color: sandybrown;
+        & > .profile-header{
+            min-height: 18rem;
+            // background-color: aquamarine;
+            & > h1{
+                font-family:$font-2;
+                font-family: 'Nunito';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 48px;
+                line-height: 110%;
+                letter-spacing: -1px;
+                color: $color-3;
+                padding: 2rem;
+            }
+            & > p{
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 25px;
+                text-align: center;
+                letter-spacing: 0.2px;
+            }
+        }
+    }
+}
