@@ -1,15 +1,17 @@
 import React from "react";
 
 const BlogCard = (props) => {
-  const {title, author,category,content}=props.value
+  const {title, author,category,content,image}=props.value
 
   return (
-    <div className="blogCard">
+    <article className="blogCard">
+      <img src={ image} alt="" />
       <h1>{title}</h1>
-      <h4>{author}</h4>
+      <div className="cont">
       <p>{content}</p>
-      <h5>{category }</h5>
-    </div>
+      </div>
+      <a href="" className='more'>LEER MAS</a>
+    </article>
   )
  
 };
