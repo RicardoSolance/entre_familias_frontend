@@ -39,3 +39,22 @@ header *, header *:visited{
 #divLogos>div>button{
     font-size: 15px;
 }
+
+#newPopup{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#newPopup *{
+    margin: 15px 0;
+}
+
+#newPopup>img{
+    height: 60px;
+    width: 60px;
+}
