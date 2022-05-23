@@ -1,6 +1,22 @@
 import React from "react";
+import { useForm } from "react-hook-form";
+import axios from "axios";
 
 const Profile = () => {
+  const { register, handleSubmit, reset } = useForm();
+
+  const updateUserData = async (data) => {
+    console.log('funcion front createEntry');
+    try {
+      await axios.put("http://localhost:5000/api/dashboard/blog/create", data);
+      reset()
+      
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  
+
   return <main className='profile-main'>
     <div className="profile-main-container">
       <div className="profile-header">
@@ -11,7 +27,7 @@ const Profile = () => {
       </div>
       </div>
 
-    <form action="">
+    <form  onSubmit={handleSubmit( updateUserData)}>
     
       <div className="profile-data-1">
         <div className="ceter-inputs">
@@ -22,15 +38,15 @@ const Profile = () => {
          
                 <div className="input-label">
                 <label htmlFor="name"> Nombre*</label>
-                <input type="text" name="name" id="name" />
+                <input  {...register("name")} type="text" name="name" id="name"  className='bg-white'/>
                 </div>
                 <div className="input-label">
                 <label htmlFor="surname"> Apellidos*</label>
-                <input type="text" name="surname" id="name" />
+            <input  {...register('surname')} type="text" name="surname" id="name" className='bg-white'/>
                 </div>
                 <div className="input-label">
                 <label htmlFor="province"> Provincia*</label>
-                  <select name="province" id="province">
+            <select {...register('province')} name="province" id="province" className='bg-white'>
                       <option value="">Elige Provincia</option>
                       <option value="Alava">Álava/Araba</option>
                       <option value="Albacete">Albacete</option>
@@ -88,7 +104,7 @@ const Profile = () => {
                 </div>
                 <div className="input-label">
                 <label htmlFor="zipcode"> Código postal*</label>
-                <input type="text" name="zipcode" id="zipcode" />
+                <input {...register('zipcode')} type="text" name="zipcode" id="zipcode" className='bg-white' />
                 </div>
           </div>
       </div>
@@ -100,11 +116,11 @@ const Profile = () => {
         <div className="ceter-inputs">
           <div className="input-label">
             <label htmlFor="familyName">Nombre de familia*</label>
-            <input type="text" name="familyName" id="familyName" />
+            <input  {...register('familyName')} type="text" name="familyName" id="familyName" />
           </div>
           <div className="input-label">
             <label htmlFor="familyType">Tipo de familia*</label>
-            <select name="familyType" id="familyType" >
+            <select {...register('familyType')} name="familyType" id="familyType" >
               <option value="">seleciona opcion</option>
               <option value="biparental">Biparental</option>
               <option value="monoparental">Monoparental</option>
@@ -113,7 +129,7 @@ const Profile = () => {
           </div>
           <div className="input-label">
             <label htmlFor="hostType">Tipo de acogida*</label>
-            <select name="hostType" id="hostType" >
+            <select {...register('hostType')} name="hostType" id="hostType" >
               <option value="">seleciona opcion</option>
               <option value="extensive">Extensa</option>
               <option value="foreign">Ajena</option>
@@ -122,7 +138,7 @@ const Profile = () => {
 
           <div className="input-label">
             <label htmlFor="foserTime">Tiempo de acogimiento*</label>
-            <select name="fosterTime" id="fosterTime" >
+            <select {...register('fosterTime')} name="fosterTime" id="fosterTime" >
               <option value="">seleciona opcion</option>
               <option value="0-1">0-1</option>
               <option value="1-2">1-2</option>
@@ -133,7 +149,7 @@ const Profile = () => {
 
           <div className="input-label">
             <label htmlFor="biologicalChildren">Hijos Biologicos *</label>
-            <select name="biologicalChildren" id="biologicalChildren" >
+            <select {...register('biologicalChildren')} name="biologicalChildren" id="biologicalChildren" >
               <option value="">seleciona opcion</option>
               <option value="0">0</option>
               <option value="1">1</option>
@@ -144,7 +160,7 @@ const Profile = () => {
           </div>
           <div className="input-label">
             <label htmlFor="fosterChildren">Hijos en acogida*</label>
-            <select name="fosterChildren" id="fosterChildren" >
+            <select {...register('fosterChildren')} name="fosterChildren" id="fosterChildren" >
               <option value="">seleciona opcion</option>
               <option value="0">0</option>
               <option value="1">1</option>
@@ -159,7 +175,7 @@ const Profile = () => {
           
           <div className="input-label">
             <label htmlFor="parentOne-studys">Nivel de estudios*</label>
-            <select name="parentOne-studys" id="parentOne-studys" >
+            <select  {...register('parentOne-studies')} name="parentOne-studies" id="parentOne-studies" >
               <option value="">seleciona opcion</option>
               <option value="0">0. Nivel infantil</option>
               <option value="1">1. Educación Primaria</option>
@@ -172,19 +188,19 @@ const Profile = () => {
           </div>
           <div className="input-label">
             <label htmlFor="parentOneArea">Area de profesion*</label>
-            <input type="text" name="parentOneArea" id="parentOneArea" />
+            <input {...register('parentOneArea')} type="text" name="parentOneArea" id="parentOneArea" />
           </div>
           <div className="input-label">
-            <label htmlFor="parentOneBirth">Area de profesion*</label>
-            <input type="date" name="parentOneBirth" id="parentOneBirth" />
+            <label htmlFor="parentOneBirth">Fecha de Nacimiento*</label>
+            <input {...register('parentOneBirth')} type="date" name="parentOneBirth" id="parentOneBirth" />
           </div>
 
           <div className="title-form">
           <h3>Padre 2</h3>
           </div>
           <div className="input-label">
-            <label htmlFor="parentTwo-studys">Nivel de estudios*</label>
-            <select name="parentTwo-studys" id="parentTwo-studys" >
+            <label htmlFor="parentTwostudies">Nivel de estudios*</label>
+            <select {...register('parentTwostudies')} name="parentTwostudies" id="parentTwostudies" >
               <option value="">seleciona opcion</option>
               <option value="0">0. Nivel infantil</option>
               <option value="1">1. Educación Primaria</option>
@@ -197,11 +213,11 @@ const Profile = () => {
           </div>
           <div className="input-label">
             <label htmlFor="parentTwoArea">Area de profesion*</label>
-            <input type="text" name="parentTwoArea" id="parentTwoArea" />
+            <input  {...register('parentTwoArea')} type="text" name="parentTwoArea" id="parentTwoArea" />
           </div>
           <div className="input-label ">
             <label htmlFor="parentTwoBirth">Fecha de Nacimiento*</label>
-            <input type="date" name="parentTwoBirth" id="parentTwoBirth" />
+            <input {...register('parentTwoBirth')}  type="date" name="parentTwoBirth" id="parentTwoBirth" />
           </div>
         </div>
         </div>
@@ -222,18 +238,18 @@ const Profile = () => {
           
           <div className="input-label">
           <label htmlFor="criminalRecord"> Numero de referencia del Certificado de Antencedentes penales y de delitos de Naturaleza Sexual</label>
-          <input type="text" name="criminalRecord" id="criminalRecord" />
+          <input {...register('criminalRecord')} type="text" name="criminalRecord" id="criminalRecord" />
           </div>
           <div className="checkbox">
             <div className="left-check">
-            <input type="checkbox" name="privacyPolicy" id="" />
+            <input  {...register('privacyPolicy')} type="checkbox" name="privacyPolicy" id="" />
             <label htmlFor="privacyPolicy">Confirmo que he leído la política de privacidad de Entre Familias y doy mi consentimiento para el tratamiento
               de mis datos personales con fines de de seguridad,
               determinación de perfiles y comunicación..</label>
             </div>
             
             <div className="left-check">
-            <input type="checkbox" name="termsCondition" id="" />
+            <input  {...register('termsCondition')} type="checkbox" name="termsCondition" id="" />
             <label htmlFor="termsCondition">Confirmo que he leído la política de privacidad de Entre Familias y doy mi consentimiento para el tratamiento
               de mis datos personales con fines de de seguridad,
               determinación de perfiles y comunicación..</label>
@@ -244,8 +260,10 @@ const Profile = () => {
           
           </div>
         </div>
-
-        
+      <div className="btn-cont">
+      <input type="submit" value="Unirme a la comunidad" />
+      </div>
+       
       </form>
      
    
