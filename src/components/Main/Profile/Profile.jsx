@@ -7,8 +7,11 @@ const Profile = () => {
 
   const updateUserData = async (data) => {
     console.log('funcion front createEntry');
+
+    console.log('this is data', data);
+
     try {
-      await axios.put("http://localhost:5000/api/dashboard/blog/create", data);
+      await axios.put(`http://localhost:5000/api/users/edit/${data.name}`, data);
       reset()
       
     } catch (error) {
