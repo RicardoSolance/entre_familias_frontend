@@ -206,28 +206,43 @@ const Profile = () => {
         </div>
         </div>
 {/*---------------------------------------------------------------------------------  */}
-        <div className="profile-data-3">
-          <h2>3. Datos hijos</h2>
+      <div className="profile-data-3">
+        <div className="ceter-inputs">
+          <h2 className='title-profile white'>3. Datos hijos</h2>
         </div>
-        <div className="profile-data-3">
-          <h2>4. Autenticación</h2>
+      
+      </div>
+{/*---------------------------------------------------------------------------------  ----*/}
+      <div className="profile-data-4">
+      <div className="ceter-inputs">
+          <h2 className='title-profile black'>4. Autenticación</h2>
+        </div>
+  
+        <div className="ceter-inputs">
+          
           <div className="input-label">
           <label htmlFor="criminalRecord"> Numero de referencia del Certificado de Antencedentes penales y de delitos de Naturaleza Sexual</label>
-          <input type="number" name="criminalRecord" id="criminalRecord" />
+          <input type="text" name="criminalRecord" id="criminalRecord" />
           </div>
           <div className="checkbox">
+            <div className="left-check">
             <input type="checkbox" name="privacyPolicy" id="" />
             <label htmlFor="privacyPolicy">Confirmo que he leído la política de privacidad de Entre Familias y doy mi consentimiento para el tratamiento
               de mis datos personales con fines de de seguridad,
               determinación de perfiles y comunicación..</label>
-            <br />
+            </div>
+            
+            <div className="left-check">
             <input type="checkbox" name="termsCondition" id="" />
             <label htmlFor="termsCondition">Confirmo que he leído la política de privacidad de Entre Familias y doy mi consentimiento para el tratamiento
               de mis datos personales con fines de de seguridad,
               determinación de perfiles y comunicación..</label>
+            </div>
+
+          
           </div>
           
-
+          </div>
         </div>
 
         
