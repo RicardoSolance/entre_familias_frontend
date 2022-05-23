@@ -45,7 +45,7 @@ const Profile = () => {
                 </div>
                 <div className="input-label">
                 <label htmlFor="surname"> Apellidos*</label>
-            <input  {...register('surname')} type="text" name="surname" id="name" className='bg-white'/>
+            <input  {...register('surname')} type="text" name="surname" id="surname" className='bg-white'/>
                 </div>
                 <div className="input-label">
                 <label htmlFor="province"> Provincia*</label>
