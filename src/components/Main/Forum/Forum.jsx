@@ -67,7 +67,7 @@ const Forum = () => {
       <div className="busqueda">
         <form onSubmit={createquestion} className="form">
           <input placeholder="Realize pregunta" name="description" />
-          <label for="quantity">Seleccione el Topico</label>
+          <label htmlFor="quantity">Seleccione el Topico</label>
           <select id="quantity" name="Topic">
             <option value="Nutricion">Nutricion </option>
             <option value="Legales">Legales </option>
