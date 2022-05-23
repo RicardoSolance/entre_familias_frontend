@@ -1,40 +1,32 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import axios from "axios";
 import Comment from "./Comment";
+import fotosForo from "../../../../assets/fotosForo.png";
 
-function CardNeas(props) {
+function CardForum(props) {
 
 const listadodata = props.listadodata
-// const listadodataa=props.listadodataa
-// console.log(listadodataa);
 
-  //otra forma es poner props entre parentesis en cards y luego poner copiar ruta del name
-  //props.poke[0].name
   return (
     <div className="card">
-       
-      
-   
-        <p>Topico:{listadodata.Topic}</p>
+      <img src={fotosForo} alt="fotos foro" />
+      <div>
+        <h4>{listadodata.Topic}</h4>
+        <p>{listadodata.postedBy.name}</p>
         <p>Descripcion:{listadodata.description}</p>
-        <p>Name:{listadodata.postedBy.name}</p>
-        
-        {/* <p>Mail:{listadodata.postedBy.email}</p> */}
-        <>
-    
-    {listadodata.commentslength !== 0
-          ? listadodata.comments.map((comment, i) => <Comment key={i} commentdata={comment} />)
+        {listadodata.commentslength !== 0
+          ? listadodata.comments.map((comment, i) => (
+              <Comment key={i} commentdata={comment} />
+            ))
           : ""}
-    </>
-    <form className="row" >
+
+        <form className="row">
           <input placeholder="Agregar comentario" name="nombre" />
-          <button  type="submit" ></button>
+          <button type="submit"></button>
         </form>
       </div>
-      
-   
+
+    </div>
   );
 }
 
-export default CardNeas;
+export default CardForum;
