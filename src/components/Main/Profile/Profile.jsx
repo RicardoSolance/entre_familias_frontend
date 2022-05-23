@@ -26,7 +26,7 @@ const Profile = () => {
                 </div>
                 <div className="input-label">
                 <label htmlFor="surname"> Apellidos*</label>
-                <input type="text" name="surname" id="name" />
+                <input type="text" name="surname" id="surname" />
                 </div>
                 <div className="input-label">
                 <label htmlFor="province"> Provincia*</label>
