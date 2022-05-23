@@ -11,7 +11,7 @@
     background-position-x: 100%;
     background-position-y: -450%;
     & > .profile-main-container{
-        width: 80%;
+        width: 58%;
         height: auto;
         margin-inline: auto;
         margin-top: 5rem;
@@ -53,7 +53,17 @@
             background-color: $color-4;
             display: flex;
             flex-direction: column;
-            // flex-wrap: wrap;
+            flex-wrap: wrap;
+        }
+
+        & > .profile-data-3{
+            width: 100%;
+            height: 38.625rem;
+            background-color: $color-4;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            margin-top: 2rem;
         }
 
     }
@@ -94,6 +104,9 @@
         text-align: center;
 
     }
+    & .bg-white{
+        background: #ffffff;
+    }
 
     & select {
         width: 32rem;
@@ -115,15 +128,24 @@
         text-align: center;
 
         & option{
-            outline: none;
+            margin: 40px;
+            background: rgba(238, 238, 238, 0.3);
+            color: $color-2;
+            text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+            border-radius: 8px;
+        }
+
+        ::selection{
+            background-color: red;
+            color: white;
         }
         
     }
 }
 .ceter-inputs{
-    width: 58%;
+    width:70%;
     height: auto;
-    // background-color: blue;
+    //  background-color: blue;
     display: flex;
     justify-content:flex-start;
     flex-wrap: wrap;
@@ -170,4 +192,73 @@
 
 .black{
     color: #080808;
+}
+
+.checkbox{
+    // background-color: rgb(214, 175, 175);
+    margin: 2rem 8rem;
+    display: flex;
+    flex-wrap: wrap;
+   
+    .left-check{
+        width: 100%;
+        padding: 1rem;
+        display: flex;
+        flex-direction: row;
+
+        & > input{
+            box-sizing: border-box;
+            // position: absolute;
+            width: 22px;
+            height: 16px;
+            left: calc(50% - 16px/2);
+            top: calc(50% - 16px/2);
+             background: #FFFFFF;
+            border: 1px solid #7C7C7C;
+           
+        }
+        & label{
+            font-family: $font-1;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 150%;
+            margin-left: 1rem;
+            // display: flex;
+            // align-items: center;
+            color: #CDCDCD;
+            text-align: justify;
+        }
+    }
+}
+
+.btn-cont{
+    width: 100%;
+    height: 10rem;
+    // background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    & input{
+        padding: 8px 32px;
+        gap: 8px;
+        background: $color-2;
+        border: none;
+        border-radius: 1rem;
+        color: $color-1;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 145%;
+        /* identical to box height, or 29px */
+
+        text-align: center;
+        letter-spacing: 0.5px;
+        cursor:pointer;
+        transition: all 0.5s ease-in-out;
+    }
+    & input:hover{
+        background:$color-hover;
+    }
+   
 }
