@@ -18,6 +18,8 @@ const Header = () => {
   const {login, user , logout} = useContext(userContext);
   const { register, handleSubmit } = useForm();
   const [open, setOpen] = useState(false);
+  const [open2, setOpen2] = useState(false);
+  const [open3, setOpen3] = useState(false);
   const [changeToSignUp, setchangeToSignUp] = useState(false);
   const [error, seterror] = useState(false);
   const [passWeak, setpassWeak] = useState(false);
@@ -29,7 +31,7 @@ const Header = () => {
     console.log(data);
     localStorage.setItem("token",data.token);
     if(data.message==='Correct credentials'){
-      login(data.user.name);
+      login(data.user.email);
       setOpen(false);
     } else{
       seterror(true);
@@ -57,8 +59,21 @@ const Header = () => {
     seterror(false);
   };
 
+  const handleOpen2 = () =>{
+    setOpen2(true)
+  }
+
+  const handleOpen3 = () =>{
+    if (user) {
+      console.log("entra aquí");
+      setOpen3(true);
+    }
+  }
+
   const handleClose = () => {
     setOpen(false);
+    setOpen2(false);
+    setOpen3(false);
     setchangeToSignUp(false)
   };
 
@@ -72,46 +87,66 @@ const Header = () => {
         <Link to="/maintenance"><img src={voluntariadoLogo} alt="voluntariado logo"/></Link>
         {user?
         <div>
-          <p>{user}</p>
+          <a onClick={handleOpen2}>{user}</a>
           <button className="secondBtn" onClick={logout}>Cerrar sesión</button>
         </div>
         :
         <img onClick={handleOpen}src={loginLogo} id="loginLogo" alt="login logo" />}
       </div>
+      <Dialog className="popup" onClose={handleClose} open={open2}>
+        <div id="newPopup">
+          <img src={logoGrande} alt="logo" />
+          <h4>¡Ya estas dentro!</h4>
+          <p>Ya formas parte de esta bonita comunidad, ahora solo te faltaría completar tu perfil para que otras familias te identifiquen y puedas también contactar a voluntairos y profesionales.</p>
+          <button className="mainBtn">Completar perfil</button>
+        </div>
+      </Dialog>
+      <Dialog open={open3} onClose={handleClose}>
+        <div id="newPopup">
+          <img src={logoGrande} alt="logo" />
+          <h4>¡Ya estas dentro!</h4>
+          <p>Ya formas parte de esta bonita comunidad, ahora solo te faltaría completar tu perfil para que otras familias te identifiquen y puedas también contactar a voluntairos y profesionales.</p>
+          <button className="mainBtn"><Link to="/profile">Completar perfil</Link></button>
+        </div>
+      </Dialog>
       <Dialog className="popup" onClose={handleClose} open={open}>
-        {changeToSignUp?
-         <form className="formPopup" onSubmit={handleSubmit(signUpUser)}>
-          <img src={logoGrande} alt="logoGrande" />
-          <h2>Crea tu cuenta</h2>
-          <p>Unete a nuestra comunidad y conecta con familias, profesionales y voluntarios.</p>
-          <label htmlFor="email">Correo electronico*</label>
-          <input {...register("email")} name="email" type="text"  required/>
-          <label htmlFor="pass1">Contraseña*</label>
-          <input {...register("pass1")} name="pass1" type="password"  required/>
-          <label htmlFor="pass2">Repite la contraseña*</label>
-          <input {...register("pass2")} name="pass2" type="password"  required/>
-          <label htmlFor="birthday">Fecha de nacimiento*</label>
-          <input {...register("birthday")} type="date" name="birthday" />
-          <div>
-            <input type="checkbox" name="privacity" />
-            <p>Confirmo que he leído la política de privacidad de Entre Familias y doy mi consentimiento para el tratamiento de mis datos personales</p>
-          </div>
-          {passWeak?<Alert severity="error">La contraseña debe contener mayúsculas, minúsculas, un número y un símbolo.</Alert>:""}
-          <button type="submit" className="mainBtn">Registrarme</button>
-        </form>
-        :          
-        <form className="formPopup" onSubmit={handleSubmit(loginUser)}>
-            <img src={logoGrande} alt="logoGrande" />
-            <h2>Empezar</h2>
-            <p>Unete a nuestra comunidad y conecta con familias, profesionales y voluntarios.</p>
-            <label htmlFor="email">Correo electrónico</label>
-            <input {...register("email")} name="email" type="text" />
-            <label htmlFor="pass1">Contraseña</label>
-            <input {...register("pass1")} name="pass1" type="password"/>
-            <button className="mainBtn" type="submit">Iniciar Sesión</button>
-            {error?<Alert severity="error">hubo un error al autenticar, comprueba si los campos son correctos.</Alert>:""}
-            <button onClick={goToSignUp} className="secondBtn">Hazte miembro</button>
-          </form>}
+        {(()=>{
+          if (changeToSignUp===true) {
+            return(
+            <form className="formPopup" onSubmit={handleSubmit(signUpUser)}>
+              <img src={logoGrande} alt="logoGrande" />
+              <h2>Crea tu cuenta</h2>
+              <p>Unete a nuestra comunidad y conecta con familias, profesionales y voluntarios.</p>
+              <label htmlFor="email">Correo electronico*</label>
+              <input {...register("email")} name="email" type="text" required />
+              <label htmlFor="pass1">Contraseña*</label>
+              <input {...register("pass1")} name="pass1" type="password" required />
+              <label htmlFor="pass2">Repite la contraseña*</label>
+              <input {...register("pass2")} name="pass2" type="password" required />
+              <label htmlFor="birthday">Fecha de nacimiento*</label>
+              <input {...register("birthday")} type="date" name="birthday" required/>
+              <div>
+                <input type="checkbox" name="privacity" required/>
+                <p>Confirmo que he leído la política de privacidad de Entre Familias y doy mi consentimiento para el tratamiento de mis datos personales</p>
+              </div>
+              {passWeak ? <Alert severity="error">La contraseña debe contener mayúsculas, minúsculas, un número y un símbolo.</Alert> : ""}
+              <button onClick={handleOpen3} type="submit" className="mainBtn">Registrarme</button>
+            </form>)          
+          } else {
+            return(
+            <form className="formPopup" onSubmit={handleSubmit(loginUser)}>
+              <img src={logoGrande} alt="logoGrande" />
+              <h2>Empezar</h2>
+              <p>Unete a nuestra comunidad y conecta con familias, profesionales y voluntarios.</p>
+              <label htmlFor="email">Correo electrónico</label>
+              <input {...register("email")} name="email" type="text" />
+              <label htmlFor="pass1">Contraseña</label>
+              <input {...register("pass1")} name="pass1" type="password" />
+              <button className="mainBtn" type="submit">Iniciar Sesión</button>
+              {error ? <Alert severity="error">hubo un error al autenticar, comprueba si los campos son correctos.</Alert> : ""}
+              <button onClick={goToSignUp} className="secondBtn">Hazte miembro</button>
+            </form>)}})()
+            }
       </Dialog>
       <Nav/>
     </header>

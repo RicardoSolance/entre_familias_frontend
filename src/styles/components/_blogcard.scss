@@ -1,0 +1,58 @@
+@import '../utils/variables.scss';
+
+.blogCard{
+    width: 48%;
+    height: 38rem;
+    background-color:#FFFFFF;
+    border-radius: 1rem;
+    gap: 32px;
+    font-family: $font-1;
+
+    & > img{
+        width: 100%;
+        height: 20rem;
+        border-radius: 1rem 1rem 0rem 0rem;
+        object-fit: cover;
+    }
+    & > h1{
+        color: $color-2;
+        text-align: start;
+        padding: 0.5rem;
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 117%;
+        letter-spacing: -0.5px;
+        margin: 0;
+    }
+    & > .cont{
+        width: 100%;
+        height: 10rem;
+        // background-color: blue;
+        overflow: hidden;
+        text-overflow: clip;
+        & > p{
+            overflow: hidden;
+            text-overflow: ellipsis; 
+            font-size: 19px;
+            color: #7C7C7C;
+            white-space: wrap;
+            text-align: start;
+            line-height: 145%;
+            letter-spacing: -0.7px;
+            padding: 0rem 0.5rem;
+        }
+
+    }
+    & > .more{
+        display: flex;
+        justify-content:left;
+        padding: 1rem;
+        font-family: $font-1;
+        color: $color-2;
+        font-size: 18px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 145%;
+
+    }
+}
