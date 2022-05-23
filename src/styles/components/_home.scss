@@ -8,9 +8,9 @@
     border-radius: 48px;
     color: white;
     border: none;
-    width: 398px;
-    height: 72px;
-    font-size: 24px;
+    width: 334px;
+    height: 48px;
+    font-size: 22px;
     cursor: pointer;
 }
 
@@ -46,19 +46,31 @@ article{
     flex-direction: column;
     align-items: center;
     align-content: center;
-    justify-content: center;
-    width: 50%;
+    justify-content: space-around;
+    width: 100%;
+    min-height: 250px;
+}
+
+#art1>div>p{
+    width: 70%;
 }
 
 #art1>div>h1{
-    font-size: 64px;
+    font-size: 48px;
     margin: 10px;
     flex-wrap: nowrap;
+    font-weight: 500;
 }
 
 #art2{
+    display: flex;
     background-color: #FAFAFA;
     height: 448px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 #art2:first-child, #art2:last-child{
@@ -97,10 +109,14 @@ article{
     width: 40%;
 }
 #art3>div>div{
+    height: 100%;
     width: 40%;
     display: flex;
     flex-direction: column;
+    align-content: center;
+    justify-content: space-around;
     align-items: flex-start;
+    flex-wrap: wrap;
 }
 
 #art3>div>div>p{
@@ -115,12 +131,12 @@ article{
     align-items: center;
     padding: 8px 32px;
     gap: 8px;
-    width: 216px;
-    height: 48px;
+    width: 208px;
+    height: 40px;
     border: 3px solid #8A25DF;
     border-radius: 48px;
     color: #8A25DF;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 600;
     cursor: pointer;
 }
@@ -145,8 +161,9 @@ article{
     display: flex;
     flex-direction: column;
     align-content: center;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+    height: 287px;
 }
 
 #art5{
@@ -165,16 +182,16 @@ article{
 }
 
 #art5>div{
+    height: 155px;
     display: flex;
     flex-direction: column;
     align-items: center;
     align-content: center;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-wrap: wrap;
 }
 
-#art6{
-    // margin: 100px 0px;
+#art6{  
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -190,11 +207,12 @@ article{
 }
 
 #art6>div{
+    height: 165px;
     display: flex;
     flex-direction: column;
     align-items: center;
     align-content: center;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-wrap: wrap;
 }
 
@@ -214,11 +232,12 @@ article{
 }
 
 #art7>div{
+    height: 250px;
     display: flex;
     flex-direction: column;
     align-items: center;
     align-content: center;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-wrap: wrap;
 }
 
@@ -231,7 +250,7 @@ article{
     flex-direction: column;
     flex-wrap: wrap;
     align-content: center;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     background-color: #FAFAFA;
     // margin-bottom: 100px;
@@ -246,10 +265,10 @@ article{
     flex-direction: column;
     flex-wrap: wrap;
     align-content: center;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     // margin-bottom: 100px;
-    height: 544px;
+    height: 233px
 }
 
 #art9>button{
@@ -289,6 +308,10 @@ article{
         align-items: center;
     }
 
+    #art3>div>div{
+        justify-content: space-evenly;
+        align-items: center;
+    }
 
 }
 
