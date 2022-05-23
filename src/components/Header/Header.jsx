@@ -46,6 +46,7 @@ const Header = () => {
       if (data==="User created succesfully") {
         setOpen(false);
         login(entry.email);
+        setOpen3(true);
       } else if(data.response.data==="Password too weak"){
         setpassWeak(true);
       }
@@ -60,14 +61,7 @@ const Header = () => {
   };
 
   const handleOpen2 = () =>{
-    setOpen2(true)
-  }
-
-  const handleOpen3 = () =>{
-    if (user) {
-      console.log("entra aquí");
-      setOpen3(true);
-    }
+    setOpen2(true);
   }
 
   const handleClose = () => {
@@ -98,7 +92,7 @@ const Header = () => {
           <img src={logoGrande} alt="logo" />
           <h4>¡Ya estas dentro!</h4>
           <p>Ya formas parte de esta bonita comunidad, ahora solo te faltaría completar tu perfil para que otras familias te identifiquen y puedas también contactar a voluntairos y profesionales.</p>
-          <button className="mainBtn">Completar perfil</button>
+          <button className="mainBtn" onClick={()=>setOpen2(false)}><Link to ="/profile">Completar perfil</Link></button>
         </div>
       </Dialog>
       <Dialog open={open3} onClose={handleClose}>
@@ -106,7 +100,7 @@ const Header = () => {
           <img src={logoGrande} alt="logo" />
           <h4>¡Ya estas dentro!</h4>
           <p>Ya formas parte de esta bonita comunidad, ahora solo te faltaría completar tu perfil para que otras familias te identifiquen y puedas también contactar a voluntairos y profesionales.</p>
-          <button className="mainBtn"><Link to="/profile">Completar perfil</Link></button>
+          <button className="mainBtn" onClick={()=>setOpen3(false)}><Link to ="/profile">Completar perfil</Link></button>
         </div>
       </Dialog>
       <Dialog className="popup" onClose={handleClose} open={open}>
@@ -130,7 +124,7 @@ const Header = () => {
                 <p>Confirmo que he leído la política de privacidad de Entre Familias y doy mi consentimiento para el tratamiento de mis datos personales</p>
               </div>
               {passWeak ? <Alert severity="error">La contraseña debe contener mayúsculas, minúsculas, un número y un símbolo.</Alert> : ""}
-              <button onClick={handleOpen3} type="submit" className="mainBtn">Registrarme</button>
+              <button type="submit" className="mainBtn">Registrarme</button>
             </form>)          
           } else {
             return(
