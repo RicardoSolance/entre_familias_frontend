@@ -106,7 +106,7 @@ const Header = () => {
           <img src={logoGrande} alt="logo" />
           <h4>¡Ya estas dentro!</h4>
           <p>Ya formas parte de esta bonita comunidad, ahora solo te faltaría completar tu perfil para que otras familias te identifiquen y puedas también contactar a voluntairos y profesionales.</p>
-          <button className="mainBtn">Completar perfil</button>
+          <button className="mainBtn"><Link to="/profile">Completar perfil</Link></button>
         </div>
       </Dialog>
       <Dialog className="popup" onClose={handleClose} open={open}>
