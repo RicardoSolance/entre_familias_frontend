@@ -9,87 +9,95 @@ const Profile = () => {
           tu familia y al tenerlo podrás utilizar el resto de herramientas
           y contenidos exclusivos para familias.</p>
       </div>
+      </div>
 
-      <form action="">
-        <div className="profile-data-1">
-          
-          <h2>1. Datos Personales</h2>
-          
-          <div className="input-label">
-          <label htmlFor="name"> Nombre*</label>
-          <input type="text" name="name" id="name" />
-          </div>
-          <div className="input-label">
-          <label htmlFor="surname"> Apellidos*</label>
-          <input type="text" name="surname" id="name" />
-          </div>
-          <div className="input-label">
-          <label htmlFor="province"> Provincia*</label>
-            <select name="province" id="province">
-                <option value="">Elige Provincia</option>
-                <option value="Alava">Álava/Araba</option>
-                <option value="Albacete">Albacete</option>
-                <option value="Alicante">Alicante</option>
-                <option value="Almería">Almería</option>
-                <option value="Asturias">Asturias</option>
-                <option value="Ávila">Ávila</option>
-                <option value="Badajoz">Badajoz</option>
-                <option value="Baleares">Baleares</option>
-                <option value="Barcelona">Barcelona</option>
-                <option value="Burgos">Burgos</option>
-                <option value="Cáceres">Cáceres</option>
-                <option value="Cádiz">Cádiz</option>
-                <option value="Cantabria">Cantabria</option>
-                <option value="Castellón">Castellón</option>
-                <option value="Ceuta">Ceuta</option>
-                <option value="Ciudad Real">Ciudad Real</option>
-                <option value="Córdoba">Córdoba</option>
-                <option value="Cuenca">Cuenca</option>
-                <option value="Girona">Gerona/Girona</option>
-                <option value="Granada">Granada</option>
-                <option value="Guadalajara">Guadalajara</option>
-                <option value="Gipuzkoa">Guipúzcoa/Gipuzkoa</option>
-                <option value="Huelva">Huelva</option>
-                <option value="Huesca">Huesca</option>
-                <option value="Jaén">Jaén</option>
-                <option value="Coruna">La Coruña/A Coruña</option>
-                <option value="La Rioja">La Rioja</option>
-                <option value="Las Palmas">Las Palmas</option>
-                <option value="León">León</option>
-                <option value="Lleida">Lérida/Lleida</option>
-                <option value="Lugo">Lugo</option>
-                <option value="Madrid">Madrid</option>
-                <option value="Málaga">Málaga</option>
-                <option value="Melilla">Melilla</option>
-                <option value="Murcia">Murcia</option>
-                <option value="Navarra">Navarra</option>
-                <option value="Orense">Orense/Ourense</option>
-                <option value="Palencia">Palencia</option>
-                <option value="Pontevedra">Pontevedra</option>
-                <option value="Salamanca">Salamanca</option>
-                <option value="Segovia">Segovia</option>
-                <option value="Sevilla">Sevilla</option>
-                <option value="Soria">Soria</option>
-                <option value="Tarragona">Tarragona</option>
-                <option value="Tenerife">Tenerife</option>
-                <option value="Teruel">Teruel</option>
-                <option value="Toledo">Toledo</option>
-                <option value="Valencia">Valencia</option>
-                <option value="Valladolid">Valladolid</option>
-                <option value="Vizcaya">Vizcaya/Bizkaia</option>
-                <option value="Zamora">Zamora</option>
-                <option value="Zaragoza">Zaragoza</option>
-          </select>
-          </div>
-          <div className="input-label">
-          <label htmlFor="zipcode"> Código postal*</label>
-          <input type="text" name="zipcode" id="zipcode" />
-          </div>
-        
-     
+    <form action="">
+    
+      <div className="profile-data-1">
+        <div className="ceter-inputs">
+        <h2 className='title-profile white'>1. Datos Personales</h2>
         </div>
-        <div className="profile-data-2">
-          <h2>2. Datos de familia</h2>
+        
+        <div className="ceter-inputs">
+         
+                <div className="input-label">
+                <label htmlFor="name"> Nombre*</label>
+                <input type="text" name="name" id="name" />
+                </div>
+                <div className="input-label">
+                <label htmlFor="surname"> Apellidos*</label>
+                <input type="text" name="surname" id="name" />
+                </div>
+                <div className="input-label">
+                <label htmlFor="province"> Provincia*</label>
+                  <select name="province" id="province">
+                      <option value="">Elige Provincia</option>
+                      <option value="Alava">Álava/Araba</option>
+                      <option value="Albacete">Albacete</option>
+                      <option value="Alicante">Alicante</option>
+                      <option value="Almería">Almería</option>
+                      <option value="Asturias">Asturias</option>
+                      <option value="Ávila">Ávila</option>
+                      <option value="Badajoz">Badajoz</option>
+                      <option value="Baleares">Baleares</option>
+                      <option value="Barcelona">Barcelona</option>
+                      <option value="Burgos">Burgos</option>
+                      <option value="Cáceres">Cáceres</option>
+                      <option value="Cádiz">Cádiz</option>
+                      <option value="Cantabria">Cantabria</option>
+                      <option value="Castellón">Castellón</option>
+                      <option value="Ceuta">Ceuta</option>
+                      <option value="Ciudad Real">Ciudad Real</option>
+                      <option value="Córdoba">Córdoba</option>
+                      <option value="Cuenca">Cuenca</option>
+                      <option value="Girona">Gerona/Girona</option>
+                      <option value="Granada">Granada</option>
+                      <option value="Guadalajara">Guadalajara</option>
+                      <option value="Gipuzkoa">Guipúzcoa/Gipuzkoa</option>
+                      <option value="Huelva">Huelva</option>
+                      <option value="Huesca">Huesca</option>
+                      <option value="Jaén">Jaén</option>
+                      <option value="Coruna">La Coruña/A Coruña</option>
+                      <option value="La Rioja">La Rioja</option>
+                      <option value="Las Palmas">Las Palmas</option>
+                      <option value="León">León</option>
+                      <option value="Lleida">Lérida/Lleida</option>
+                      <option value="Lugo">Lugo</option>
+                      <option value="Madrid">Madrid</option>
+                      <option value="Málaga">Málaga</option>
+                      <option value="Melilla">Melilla</option>
+                      <option value="Murcia">Murcia</option>
+                      <option value="Navarra">Navarra</option>
+                      <option value="Orense">Orense/Ourense</option>
+                      <option value="Palencia">Palencia</option>
+                      <option value="Pontevedra">Pontevedra</option>
+                      <option value="Salamanca">Salamanca</option>
+                      <option value="Segovia">Segovia</option>
+                      <option value="Sevilla">Sevilla</option>
+                      <option value="Soria">Soria</option>
+                      <option value="Tarragona">Tarragona</option>
+                      <option value="Tenerife">Tenerife</option>
+                      <option value="Teruel">Teruel</option>
+                      <option value="Toledo">Toledo</option>
+                      <option value="Valencia">Valencia</option>
+                      <option value="Valladolid">Valladolid</option>
+                      <option value="Vizcaya">Vizcaya/Bizkaia</option>
+                      <option value="Zamora">Zamora</option>
+                      <option value="Zaragoza">Zaragoza</option>
+                </select>
+                </div>
+                <div className="input-label">
+                <label htmlFor="zipcode"> Código postal*</label>
+                <input type="text" name="zipcode" id="zipcode" />
+                </div>
+          </div>
+      </div>
+{/*---------------------------------------------------------------------------------  */}
+      <div className="profile-data-2">
+      <div className="ceter-inputs">
+        <h2 className='title-profile black'>2. Datos de Familia</h2>
+      </div>
+        <div className="ceter-inputs">
           <div className="input-label">
             <label htmlFor="familyName">Nombre de familia*</label>
             <input type="text" name="familyName" id="familyName" />
@@ -145,7 +153,10 @@ const Profile = () => {
               <option value="4">+4</option>
             </select>
           </div>
-          <h3>Padre</h3>
+          <div className="title-form">
+          <h3>Padre 1</h3>
+          </div>
+          
           <div className="input-label">
             <label htmlFor="parentOne-studys">Nivel de estudios*</label>
             <select name="parentOne-studys" id="parentOne-studys" >
@@ -168,7 +179,9 @@ const Profile = () => {
             <input type="date" name="parentOneBirth" id="parentOneBirth" />
           </div>
 
+          <div className="title-form">
           <h3>Padre 2</h3>
+          </div>
           <div className="input-label">
             <label htmlFor="parentTwo-studys">Nivel de estudios*</label>
             <select name="parentTwo-studys" id="parentTwo-studys" >
@@ -186,15 +199,15 @@ const Profile = () => {
             <label htmlFor="parentTwoArea">Area de profesion*</label>
             <input type="text" name="parentTwoArea" id="parentTwoArea" />
           </div>
-          <div className="input-label">
+          <div className="input-label ">
             <label htmlFor="parentTwoBirth">Fecha de Nacimiento*</label>
             <input type="date" name="parentTwoBirth" id="parentTwoBirth" />
           </div>
         </div>
-        
+        </div>
+{/*---------------------------------------------------------------------------------  */}
         <div className="profile-data-3">
           <h2>3. Datos hijos</h2>
-
         </div>
         <div className="profile-data-3">
           <h2>4. Autenticación</h2>
@@ -220,7 +233,7 @@ const Profile = () => {
         
       </form>
      
-    </div>
+   
   </main>;
 };
 
