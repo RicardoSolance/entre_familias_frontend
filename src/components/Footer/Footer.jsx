@@ -6,7 +6,6 @@ const Footer = () => {
   return (
     <footer>
       <div id="footer1">
-        <a>Aviso Legal</a>
         <Link onClick={()=>window.scrollTo(0,0)} to="/privacy">Política de Privacidad</Link>
         <Link onClick={()=>window.scrollTo(0,0)} to="/cookies">Política de cookies</Link>
       </div>

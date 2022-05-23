@@ -12,8 +12,6 @@ import { Link } from "react-router-dom";
 
 
 const Home = () => {
-
-
   
   return (
     <div>
@@ -69,7 +67,7 @@ const Home = () => {
         <div>
           <h2>Perfil</h2>
           <p>Gestiona y visualiza toda la información sobre tu familia y tu actividad en la comunidad</p>
-          <button className="secondBtn">Crea tu perfil</button>
+          <button className="secondBtn" onClick={()=>window.scrollTo(0,0)}><Link to="/profile">Crea tu perfil</Link></button>
         </div>
       </article>
       <article id="art8">
