@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useEffect, useState } from "react";
 import Ukraine from "../../../assets/ukraine.png";
 import axios from "axios";
 import CardForum from "../Forum/CardForum";
@@ -7,7 +7,6 @@ import CircularProgress from '@mui/material/CircularProgress';
 const Forum = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [datasforo, setSearch] = useState([]);
-  const [questionpost, setquestion] = useState(null);
 
   const createquestion = async (e) => {
     e.preventDefault();
@@ -31,8 +30,8 @@ const Forum = () => {
         questionform,
         config
       );
-      // const data=res.data
-      // console.log(data);
+      const data=res.data
+      console.log(data);
       //  setquestion(res);
     }
     catch(error){
