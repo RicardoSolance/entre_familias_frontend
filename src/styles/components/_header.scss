@@ -23,3 +23,38 @@ header *, header *:visited{
     width: 100%;
     height: 74px;
 }
+
+#divLogos>div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#divLogos>div>*{
+    margin: 0 15px;
+}
+#divLogos>div>button{
+    font-size: 15px;
+}
+
+#newPopup{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#newPopup *{
+    margin: 15px 0;
+}
+
+#newPopup>img{
+    height: 60px;
+    width: 60px;
+}
