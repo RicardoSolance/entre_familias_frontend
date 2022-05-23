@@ -90,7 +90,9 @@ const Forum = () => {
       </div>
     </section>
   ) : (
-    <CircularProgress />
+    <div id="divSpinner">
+      <CircularProgress />
+    </div>
   );
 };
 

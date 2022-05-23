@@ -59,3 +59,13 @@ section>div>h2{
 .card>div>h4{
     font-weight: 500;
 }
+
+#divSpinner{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
