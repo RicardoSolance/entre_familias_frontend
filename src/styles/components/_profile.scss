@@ -1,20 +1,20 @@
 @import '../utils/variables.scss';
 
 .profile-main{
-    width: 100vw;
+    width: 100%;
     margin: 0;
     // background-color: blue;
     background-image: url('../../assets/bg.png');
-    background-size: 360px;
+    background-size: 600px;
     background-repeat: no-repeat;
     overflow: hidden;
-    background-position-x: 97.5%;
-    background-position-y: -40%;
+    background-position-x: 100%;
+    background-position-y: -450%;
     & > .profile-main-container{
         width: 80%;
         height: auto;
         margin-inline: auto;
-        margin-top: 0;
+        margin-top: 5rem;
         // background-color: sandybrown;
         & > .profile-header{
             min-height: 18rem;
@@ -36,17 +36,77 @@
                 font-size: 18px;
                 line-height: 25px;
                 text-align: center;
+                font-family: $font-1;
                 letter-spacing: 0.2px;
             }
         }
     }
     & > form{
+
         width: 100%;
+
+     
+
         & > .profile-data-1{
             width: 100%;
             height: 25.625rem;
             background-color: $color-4;
         }
 
+    }
+}
+
+.input-label{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    & label{
+        text-align: left;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 145%;
+        margin-bottom: 1rem;
+        color: #020003;
+    }
+    & input{
+        width: 30.5rem;
+        height: 3rem ;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        // align-items: center;
+        padding: 8px 16px 8px 8px;
+        gap: 8px;
+        background: #F0F0F0;
+        border-radius: 8px;
+        border: none;
+        outline: none;
+        font-family: $font-1;
+        color: #0a0a0a;
+        font-weight: 400;
+        font-size: 16px;
+        text-align: center;
+
+    }
+
+    & select {
+        width: 31.5rem;
+        height: 4rem ;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 8px 16px 8px 8px;
+        gap: 8px;
+        background: #F0F0F0;
+        border-radius: 8px;
+        border: none;
+        outline: none;
+        font-family: $font-1;
+        color: #0a0a0a;
+        font-weight: 400;
+        font-size: 16px;
+        text-align: left;
     }
 }
