@@ -21,8 +21,6 @@ const Forum = () => {
     const config = {
       headers: { Authorization: `Bearer ${token}` },
     };
-
-
   
   try{
       const res = await axios.post(
@@ -90,9 +88,7 @@ const Forum = () => {
       </div>
     </section>
   ) : (
-    <div id="divSpinner">
-      <CircularProgress />
-    </div>
+    <CircularProgress />
   );
 };
 

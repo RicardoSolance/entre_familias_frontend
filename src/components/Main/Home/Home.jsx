@@ -19,8 +19,8 @@ const Home = () => {
         <img src={familias} alt="familias"/>
         <div>
           <h1>Entre Familias</h1>
-          <p>Ayudamos a familias de acogida en el proceso de adaptación del niño en el hogar. Todos nos hemos sentido solos, es el momento de unirse.</p>
-          <button className="mainBtn" onClick={()=>window.scrollTo(0,0)}><Link to="/maintenance">¡Te estamos esperando!</Link></button>
+          <p>¡Gracias por formar parte de nuestra comunidad, ayudarnos a conectar, y brindar soporte a familias de acogida!</p>
+          <button className="mainBtn" onClick={()=>window.scrollTo(0,0)}><Link to="/maintenance">Mira tu perfil</Link></button>
         </div>
       </article>
       <article id="art2">
