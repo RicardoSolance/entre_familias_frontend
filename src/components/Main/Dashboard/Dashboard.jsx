@@ -8,7 +8,7 @@ const Dashboard = () => {
   const createEntry = async (create) => {
     console.log('funcion front createEntry');
     try {
-      await axios.post("http://localhost:5000/api/dashboard/blog/create", create);
+      await axios.post("https://entre-familias-backend.herokuapp.com/api/dashboard/blog/create", create);
       reset()
       
     } catch (error) {

@@ -24,7 +24,7 @@ const Forum = () => {
   
   try{
       const res = await axios.post(
-        "http://localhost:5000/api/users/foro/create",
+        "https://entre-familias-backend.herokuapp.com/api/users/foro/create",
         questionform,
         config
       );
@@ -41,7 +41,7 @@ const Forum = () => {
       setIsLoading(true);
 
       try {
-        const resp = await axios.get(`http://localhost:5000/api/users/foro`);
+        const resp = await axios.get(`https://entre-familias-backend.herokuapp.com/api/users/foro`);
         const data = await resp.data;
         console.log(data);
 

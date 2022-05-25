@@ -46,7 +46,7 @@ const Header = () => {
 
   const loginUser = async(log)=>{
     console.log(log);
-    const res = await axios.post("http://localhost:5000/api/users/login",log);
+    const res = await axios.post("https://entre-familias-backend.herokuapp.com/api/users/login",log);
     const data = res.data;
     console.log(data);
     localStorage.setItem("token",data.token);
@@ -62,7 +62,7 @@ const Header = () => {
   const signUpUser = async (entry) =>{
     console.log(entry);
     try {
-      const res = await axios.post("http://localhost:5000/api/users/create", entry);
+      const res = await axios.post("https://entre-familias-backend.herokuapp.com/api/users/create", entry);
       const data = res.data;
       if (data==="User created succesfully") {
         setOpen(false);
