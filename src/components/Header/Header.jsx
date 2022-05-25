@@ -1,15 +1,17 @@
-import React, {useState, useContext} from "react";
+import React, {useState, useContext, useEffect} from "react";
 import Nav from "./Nav";
 import {Link}from "react-router-dom";
 import loginLogo from "../../assets/acc-circle.png";
 import voluntariadoLogo from "../../assets/voluntariado-logo.png";
-import logoGrande from "../../assets/logoGrande.png"
+import logoGrande from "../../assets/logoGrande.png";
+import users_group from "../../assets/Users_Group.png";
+import logoPrincipal from "../../assets/logoPrincipal.png"
 import axios from "axios";
 import { useForm } from "react-hook-form";
 import Dialog from '@mui/material/Dialog';
 import { userContext } from "../../context/userContext";
 import Alert from '@mui/material/Alert';
-
+import Hamburger from 'hamburger-react';
 
 
 
@@ -23,6 +25,24 @@ const Header = () => {
   const [changeToSignUp, setchangeToSignUp] = useState(false);
   const [error, seterror] = useState(false);
   const [passWeak, setpassWeak] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [windowWidth, setWindowWidth] = useState("");
+
+  const detectSize = () => {
+    setWindowWidth(window.innerWidth);
+  }
+
+  useEffect(() => {
+    window.addEventListener('resize', detectSize)
+
+    return () => {
+      window.removeEventListener('resize', detectSize)
+    }
+  }, [windowWidth]);
+
+
+ 
+
 
   const loginUser = async(log)=>{
     console.log(log);
@@ -37,6 +57,7 @@ const Header = () => {
       seterror(true);
     }
   }
+
 
   const signUpUser = async (entry) =>{
     console.log(entry);
@@ -75,8 +96,25 @@ const Header = () => {
     setchangeToSignUp(true);
   }
 
-  return (
-    <header>
+  return windowWidth<911?(
+    <header id="burgerHeader">
+      <Hamburger toggled={isOpen} toggle={setIsOpen} className="hamburger-component"/>
+        {isOpen?
+        <div id="burger">
+          <Link to="/" onClick={()=>window.scrollTo(0,170)}>¿Quiénes somos?</Link>
+          <Link to="/forum">Foro</Link>
+          <Link to="/" onClick={()=>window.scrollTo(0,2300)}>Ayuda profesional</Link>
+          <Link to="/maintenance">Eventos</Link>
+          <Link to="/" onClick={()=>window.scrollTo(0,4900)}>Información</Link>
+          <Link to="/blog">Blog</Link>
+          <Link to="/" onClick={()=>window.scrollTo(0,2900)}>Contacto</Link>
+       </div>
+        :""}
+      <img onClick={handleOpen} id="users_group" src={users_group} alt="users group" />
+      <img src={logoPrincipal} alt="logo principal" />
+      </header>
+      ):(
+     <header id="normalHeader">
       <div id="divLogos">
         <Link to="/maintenance"><img src={voluntariadoLogo} alt="voluntariado logo"/></Link>
         {user?
@@ -86,6 +124,7 @@ const Header = () => {
         </div>
         :
         <img onClick={handleOpen}src={loginLogo} id="loginLogo" alt="login logo" />}
+        
       </div>
       <Dialog className="popup" onClose={handleClose} open={open2}>
         <div id="newPopup">
