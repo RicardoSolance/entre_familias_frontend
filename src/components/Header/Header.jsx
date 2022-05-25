@@ -9,7 +9,7 @@ import { useForm } from "react-hook-form";
 import Dialog from '@mui/material/Dialog';
 import { userContext } from "../../context/userContext";
 import Alert from '@mui/material/Alert';
-
+import {parseCookies,setCookie,getCookie} from "../../utils/cookies"
 
 
 
@@ -30,6 +30,7 @@ const Header = () => {
     const data = res.data;
     console.log(data);
     localStorage.setItem("token",data.token);
+    setCookie("token",data.token)
     if(data.message==='Correct credentials'){
       login(data.user.email);
       setOpen(false);

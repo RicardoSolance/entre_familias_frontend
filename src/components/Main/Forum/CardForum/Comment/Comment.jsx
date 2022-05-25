@@ -26,7 +26,7 @@ console.log(commentdata);
       
           <p>Comentarios:{commentdata.answer}</p>
           <p>Time:{commentdata.time}</p>
-        {/* <p>Comentarios:{commentdata.postedBy.name}</p> */}
+        <p>nombreComentario:{commentdata.commentBy?.name}</p>
         
    
 

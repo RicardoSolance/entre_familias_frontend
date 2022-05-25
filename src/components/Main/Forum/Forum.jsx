@@ -5,6 +5,7 @@ const Forum = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [datasforo, setSearch] = useState([]);
   const [questionpost, setquestion] = useState(null);
+  const [comment, setcomment] = useState(null);
 
   const createquestion = async (e) => {
     e.preventDefault();
@@ -20,7 +21,9 @@ const Forum = () => {
       headers: { Authorization: `Bearer ${token}` },
     };
 
-
+    // const refreshcomment= (newUser) =>{
+    //   setuser(newUser);
+    // }
   
   try{
       const res = await axios.post(

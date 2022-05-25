@@ -11,7 +11,7 @@ const listadodata = props.listadodata
 
   //otra forma es poner props entre parentesis en cards y luego poner copiar ruta del name
   //props.poke[0].name
-  const createquestion = async (e) => {
+  const createcomment = async (e) => {
     e.preventDefault()
     const questionform = {
       answer: e.target.nombre.value,
@@ -62,7 +62,7 @@ const listadodata = props.listadodata
           ? listadodata.comments.map((comment, i) => <Comment key={i} commentdata={comment} />)
           : ""}
     </>
-    <form onSubmit={createquestion} className="form">
+    <form onSubmit={createcomment} className="form">
           <input placeholder="Agregar comentario" name="nombre" />
           <button type="submit" ></button>
         </form>
