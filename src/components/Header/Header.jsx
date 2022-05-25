@@ -14,8 +14,6 @@ import Alert from '@mui/material/Alert';
 import Hamburger from 'hamburger-react';
 
 
-
-
 const Header = () => {
   const {login, user , logout} = useContext(userContext);
   const { register, handleSubmit } = useForm();
@@ -33,10 +31,10 @@ const Header = () => {
   }
 
   useEffect(() => {
-    window.addEventListener('resize', detectSize)
+    window.addEventListener('resize', detectSize);
 
     return () => {
-      window.removeEventListener('resize', detectSize)
+      window.removeEventListener('resize', detectSize);
     }
   }, [windowWidth]);
 
