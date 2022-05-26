@@ -1,12 +1,13 @@
 @import '../utils/variables.scss';
 
 .blogCard{
-    width: 48%;
+    width: 45%;
     height: 38rem;
     background-color:#FFFFFF;
     border-radius: 1rem;
     gap: 32px;
     font-family: $font-1;
+    margin-top: 1rem;
 
     & > img{
         width: 100%;
@@ -55,4 +56,19 @@
         line-height: 145%;
 
     }
+}
+@media only screen and (max-width: 1079px){
+
+    .blogCard{
+      width: 49%;
+    }
+
+}
+
+@media only screen and (max-width: 725px){
+
+    .blogCard{
+      width: 80%;
+    }
+
 }

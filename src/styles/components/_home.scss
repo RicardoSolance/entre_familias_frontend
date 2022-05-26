@@ -95,6 +95,13 @@ article{
 #art3>h1{
     margin: 70px;
 }
+.foto-header{
+    width: 100%;
+    height: 600px;
+    background-image: url('../../assets/familias.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 #art3>div{
     display: flex;
@@ -316,3 +323,123 @@ article{
 }
 
 
+@media only screen and (max-width: 450px){
+ *{
+     max-width: 420px;
+ }
+
+ .formPopup{
+     width: 319px;
+ }
+
+ .formPopup>*{
+     max-width: 300px;
+ }
+
+ .formPopup>.mainBtn, .formPopup>.secondBtn{
+     max-width: 300px;
+ }
+ #divHome{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .mainBtn{
+     max-width: 340px;
+     font-size: 14px;
+ }
+ .secondBtn{
+    max-width: 340px;
+    font-size: 14px;
+    height: 48px;
+ }
+
+ h1,h2{
+     border-bottom: 2px solid #A5EBE2;
+ }
+
+ #art1 > div > h1{
+     font-size: 32px;
+ }
+
+ .foto-header{
+     max-width: 375px;
+ }
+
+ #art2>img{
+    width: 375px;
+    height: 126px;
+ }
+
+ #art3>div>div{
+    width: 270px;
+ }
+ #art3 > h1{
+    margin: 170px 0;
+ }
+
+ #art3>div>img{
+    width: 332px;
+    height: 228px;
+ }
+
+ #art4 > div{
+    width: 270px; 
+ }
+
+ #art4>img{
+     width: 330px;
+     height: 180px;
+ }
+
+ #art5{
+     width: 350px;
+ }
+
+ #art5>img{
+    margin: 0;
+    width: 206px;
+    height: 66px;
+ }
+
+ #art5>div>h2,#art5>div>p{
+     display: none;
+ }
+
+ #art6 > img{
+     width: 275px;
+ }
+
+ #art6>div{
+     width: 343px;
+ }
+
+ #art7 > img{
+     width: 282px;
+     height:167px
+ }  
+
+ #art7 > div{
+     width: 340px;
+ }
+
+ #art8>img{
+     width: 341px;
+     height: 120px;
+ }
+ #art8>p{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 22px;
+ }
+
+ #art9{
+     width: 340px;
+     margin-bottom:30px;
+ }
+}
