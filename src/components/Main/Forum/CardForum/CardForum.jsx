@@ -33,9 +33,6 @@ const createcomment = async (e) => {
     catch(error){
   console.log(error);
     }
-  
-  
-  
   }
     
  
@@ -47,27 +44,21 @@ const createcomment = async (e) => {
     <div className="card">
       <img src={fotosForo} alt="fotos foro" />
       <div>
-        <h4>{listadodata.Topic}</h4>
-        <p>{listadodata.postedBy.name}</p>
-        <p>Time:{listadodata.time}</p>
-        <p>Descripcion:{listadodata.description}</p>
-      
-        
-  
-        
-      
-        <>
-    
-    {listadodata.commentslength !== 0
-          ? listadodata.comments.map((comment, i) => <Comment key={i} commentdata={comment} />)
+        <h2>{listadodata.Topic}</h2>
+        <p style={{fontWeight:"200"}}>{listadodata.postedBy.name}</p>
+        <p>Hora: {listadodata.time.slice(11, 16)}</p>
+        <p>Descripción: {listadodata.description}</p>
+
+        {listadodata.commentslength !== 0
+          ? listadodata.comments.map((comment, i) => (
+              <Comment key={i} commentdata={comment} />
+            ))
           : ""}
-    </>
-    <form onSubmit={createcomment} className="form">
-          <input placeholder="Agregar comentario" name="nombre" />
-          <button type="submit" >Enviar Comentario</button>
+        <form onSubmit={createcomment} className="form">
+          <input className="inputForum" type="text" placeholder="Agregar comentario" name="nombre" />
+          <button className="mainBtn" type="submit">Enviar Comentario</button>
         </form>
       </div>
-
     </div>
   );
 }

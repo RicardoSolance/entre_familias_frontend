@@ -9,6 +9,7 @@
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
+    align-items: center;
 
 }
 
@@ -36,6 +37,7 @@ section>div>h2{
 }
 
 .card{
+    margin: 20px 0;
     width: 90%;
     display: flex;
     flex-direction: row;
@@ -43,10 +45,21 @@ section>div>h2{
     align-content: center;
     align-items: center;
     justify-content: center;
+    border-bottom: #EBEBEB 2px solid;
     
 }
 
+.inputForum{
+    background: #F0F0F0;
+    border-radius: 8px;
+    width: 80%;
+    height: 45px;
+    border-radius: 8px;
+    border: none;
+}
+
 .card>div{
+    margin-left: 10px;
     width: 65%;
     display: flex;
     flex-direction: column;
@@ -60,6 +73,16 @@ section>div>h2{
     font-weight: 500;
 }
 
+.cardComment{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: center;
+    border-bottom: 2px solid #EBEBEB;
+    margin-bottom: 20px;
+}
+
 #divSpinner{
     min-height: 100vh;
     display: flex;
@@ -69,3 +92,44 @@ section>div>h2{
     align-content: center;
 }
 
+.form>.mainBtn{
+    width: 200px;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#quantity{
+    background: #F0F0F0;
+    border-radius: 8px;
+    width: 80%;
+    height: 45px;
+    border-radius: 8px;
+    border: none; 
+}
+
+@media only screen and (max-width: 450px){
+    #divForum{
+        flex-direction: column;
+        align-content: center;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .sectionForum,.sectionForum>*{
+        max-width: 350px;
+    }
+
+    .listaForum{
+        max-width: 350px;
+   
+    }
+}
