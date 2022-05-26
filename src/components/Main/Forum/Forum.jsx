@@ -3,12 +3,23 @@ import Ukraine from "../../../assets/ukraine.png";
 import axios from "axios";
 import CardForum from "../Forum/CardForum";
 import CircularProgress from '@mui/material/CircularProgress';
+import usePagination from "../../../hooks/paginate";
+import Pagination from '@mui/material/Pagination'
 
 const Forum = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [datasforo, setSearch] = useState([]);
   const [questionpost, setquestion] = useState(null);
   const [comment, setcomment] = useState(null);
+  let [page, setPage] = useState(1);
+  const PER_PAGE = 24;
+  const count = Math.ceil(datasforo.length / PER_PAGE);
+  const _DATA = usePagination(datasforo, PER_PAGE);
+  const handleChange = (e, p) => {
+    setPage(p);
+    _DATA.jump(p);
+    
+  };
 
   const refreshcomment= (value) =>{
     setcomment(value);
@@ -65,15 +76,25 @@ const Forum = () => {
   }, [questionpost, comment]);
 
   return !isLoading ? (
+    
     <section>
       <div id="forumIntro">
         <h2>Comunidad entre familias</h2>
         <p>Tus problemas no son únicos, y la mejor ayuda te la brindan familias como la tuya.. En este foro podrás preguntar, encontrar, y apoyar cualquier duda. Te recomendamos no compartir información personal de tu hijo/a de acogida por seguridad.</p>
       </div>
+      <Pagination
+        count={count}
+        size="large"
+        page={page}
+        variant="outlined"
+        shape="rounded"
+        
+        onChange={handleChange}
+      />
       <div id="divForum">
         <div className="listaForum">
           {datasforo.length !== 0
-            ? datasforo.map((dataforo, i) => (
+            ? _DATA.currentData().map((dataforo, i) => (
                 <CardForum key={i} listadodata={dataforo}  refresh={()=>refreshcomment(i)}/>
               ))
             : ""}
