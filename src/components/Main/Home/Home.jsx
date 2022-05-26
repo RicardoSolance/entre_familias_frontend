@@ -14,7 +14,7 @@ import { Link } from "react-router-dom";
 const Home = () => {
   
   return (
-    <div>
+    <div id="divHome">
       <article id="art1">
         {/* <img src={familias} alt="familias"/> */}
         <div className="foto-header"></div>

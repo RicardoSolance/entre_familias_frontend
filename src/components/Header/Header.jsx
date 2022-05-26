@@ -218,7 +218,7 @@ const Header = () => {
          ""
        )}
        <div id="divBurgerLogos">
-         <img src={logoPrincipal} alt="logo principal" />
+         <img id="entreFamiliasLogo" src={logoPrincipal} alt="logo principal" />
          {user ? (
            <div>
              <a style={{fontWeight:"200"}} onClick={handleOpen2}>{user}</a>
