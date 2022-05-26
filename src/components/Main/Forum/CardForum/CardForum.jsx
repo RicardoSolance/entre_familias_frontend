@@ -49,12 +49,13 @@ const createcomment = async (e) => {
       <div>
         <h4>{listadodata.Topic}</h4>
         <p>{listadodata.postedBy.name}</p>
-        <p>Descripcion:{listadodata.description}</p>
         <p>Time:{listadodata.time}</p>
+        <p>Descripcion:{listadodata.description}</p>
+      
         
   
         
-        <p>Name:{listadodata.postedBy.name}</p>
+      
         <>
     
     {listadodata.commentslength !== 0
