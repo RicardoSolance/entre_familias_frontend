@@ -1,16 +1,16 @@
 @import '../utils/variables.scss';
 
-// main{
-//     display: flex;
-//     justify-content: center;
-//     width: 100vw;
-// }
-.main-container{
+main{
+    display: flex;
+    justify-content: center;
     width: 100%;
+}
+.main-container{
+    width: 100vw;
     min-height: 20rem;
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-color:#FBFBFC; 
 
     & > .parent-container{
@@ -21,6 +21,7 @@
         // background-color: aquamarine;
         justify-content: center;
         align-items: center;
+        margin-inline: auto;
 
         & > .blog-head{
             width: 39rem;

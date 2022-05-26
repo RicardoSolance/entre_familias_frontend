@@ -29,9 +29,9 @@ const Blog = () => {
       <div className="blog-head">
         <h1 className='title' >Nuestro Blog</h1>
         <h2 className='sub-title'>informate con nosotros</h2>
-          <p>Bienvenido! Aquí podras acceder a información para prepararte y acompañarte
-            durante el proceso de acogida y adaptación. Tambien encontraras articulos que te ayudaran
-            a entender a tu nuevo hijo y como hacer para poder entenderte con el
+          <p>¡Bienvenido! Aquí podras acceder a información para prepararte y acompañarte
+            durante el proceso de acogida y adaptación. También encontraras artículos que te ayudarán
+            a entender a tu nuevo hijo y cómo hacer para poder entenderte con él
             o ella de la mejor manera posible.</p>
       </div>
       <div className="blog-head-btn">
