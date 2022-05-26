@@ -21,7 +21,7 @@ const createcomment = async (e) => {
     };
     try{
       const res = await axios.put(
-        `http://localhost:5000/api/users/foro/${listadodata._id}`,
+        `https://entre-familias-backend.herokuapp.com/api/users/foro/${listadodata._id}`,
         questionform, 
         config
       );
