@@ -198,19 +198,31 @@ const Header = () => {
        />
        {isOpen ? (
          <div id="burger">
-           <Link to="/" onClick={() => window.scrollTo(0, 170)}>
+           <Link to="/" onClick={() =>{
+              window.scrollTo(0, 170);
+              setIsOpen(false);
+           } }>
              ¿Quiénes somos?
            </Link>
-           <Link to="/forum">Foro</Link>
-           <Link to="/" onClick={() => window.scrollTo(0, 2300)}>
+           <Link to="/forum" onClick={()=>setIsOpen(false)}>Foro</Link>
+           <Link to="/" onClick={() => {
+             window.scrollTo(0, 2300);
+             setIsOpen(false);
+             }}>
              Ayuda profesional
            </Link>
-           <Link to="/maintenance">Eventos</Link>
-           <Link to="/" onClick={() => window.scrollTo(0, 4900)}>
+           <Link to="/maintenance" onClick={()=>setIsOpen(false)}>Eventos</Link>
+           <Link to="/" onClick={() =>{
+              window.scrollTo(0, 4900);
+              setIsOpen(false);
+           }}>
              Información
            </Link>
-           <Link to="/blog">Blog</Link>
-           <Link to="/" onClick={() => window.scrollTo(0, 2900)}>
+           <Link to="/blog" onClick={()=>setIsOpen(false)}>Blog</Link>
+           <Link to="/" onClick={() =>{
+              window.scrollTo(0, 2900);
+              setIsOpen(false);
+           }}>
              Contacto
            </Link>
          </div>
