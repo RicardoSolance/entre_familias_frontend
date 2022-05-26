@@ -29,7 +29,7 @@ const Dashboard = () => {
 
     // console.log('this is my object', entry);
     try {
-      await axios.post("http://localhost:5000/api/dashboard/blog/create", entry);
+      await axios.post("https://entre-familias-backend.herokuapp.com/api/dashboard/blog/create", create);
       reset()
       
     } catch (error) {

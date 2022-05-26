@@ -47,7 +47,7 @@ const Header = () => {
 
   const loginUser = async(log)=>{
     console.log(log);
-    const res = await axios.post("http://localhost:5000/api/users/login",log);
+    const res = await axios.post("https://entre-familias-backend.herokuapp.com/api/users/login",log);
     const data = res.data;
     console.log(data);
     localStorage.setItem("token",data.token);
@@ -64,7 +64,7 @@ const Header = () => {
   const signUpUser = async (entry) =>{
     console.log(entry);
     try {
-      const res = await axios.post("http://localhost:5000/api/users/create", entry);
+      const res = await axios.post("https://entre-familias-backend.herokuapp.com/api/users/create", entry);
       const data = res.data;
       if (data==="User created succesfully") {
         setOpen(false);
@@ -100,13 +100,17 @@ const Header = () => {
 
   if (windowWidth>911) {
     return (
+
     <header id="normalHeader">
      <div id="divLogos">
        <Link to="/maintenance"><img src={voluntariadoLogo} alt="voluntariado logo"/></Link>
        {user?
        <div>
+
          <a style={{color:"white"}} onClick={handleOpen2}>{user}</a>
          <p style={{cursor:"pointer"}} onClick={logout}>Cerrar sesión</p>
+
+
        </div>
        :
        <img onClick={handleOpen}src={loginLogo} id="loginLogo" alt="login logo" />}
@@ -364,6 +368,7 @@ const Header = () => {
        </Dialog>
      </header>
    );
+      
 };
 }
 export default Header;

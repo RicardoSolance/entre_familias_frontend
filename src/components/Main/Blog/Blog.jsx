@@ -11,7 +11,7 @@ const Blog = () => {
   useEffect(() => {
     async function getAllentries() {
       try {
-        const res = await axios.get("http://localhost:5000/api/blog");
+        const res = await axios.get("https://entre-familias-backend.herokuapp.com/api/blog");
         const data = res.data;
         console.log('datos que nos trae', data)
         setEntries(data)

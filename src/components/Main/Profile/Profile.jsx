@@ -11,7 +11,7 @@ const Profile = () => {
     console.log('this is data', data);
 
     try {
-      await axios.put(`http://localhost:5000/api/users/edit/${data.name}`, data);
+      await axios.put(`https://entre-familias-backend.herokuapp.com/api/users/edit/${data.name}`, data);
       reset()
       
     } catch (error) {
