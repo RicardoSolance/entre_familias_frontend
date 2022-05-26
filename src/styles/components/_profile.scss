@@ -5,12 +5,11 @@
     margin: 0;
     // background-color: blue;
     background-image: url('../../assets/bg.png');
-    background-size: 1400px;
+    background-size: 1600px;
     background-repeat: no-repeat;
     overflow: hidden;
-    background-position-x: -100%;
-    background-position-y: -10%;
-    
+    background-position-x:255%;
+    background-position-y: -27%;
     display: flex;
     flex-direction: column;
     & > .profile-main-container{
