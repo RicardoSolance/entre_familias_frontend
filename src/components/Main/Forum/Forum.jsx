@@ -7,6 +7,13 @@ import CircularProgress from '@mui/material/CircularProgress';
 const Forum = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [datasforo, setSearch] = useState([]);
+  const [questionpost, setquestion] = useState(null);
+  const [comment, setcomment] = useState(null);
+
+  const refreshcomment= (value) =>{
+    setcomment(value);
+  }
+
 
   const createquestion = async (e) => {
     e.preventDefault();
@@ -21,6 +28,8 @@ const Forum = () => {
     const config = {
       headers: { Authorization: `Bearer ${token}` },
     };
+
+  
   
   try{
       const res = await axios.post(
@@ -28,9 +37,9 @@ const Forum = () => {
         questionform,
         config
       );
-      const data=res.data
-      console.log(data);
-      //  setquestion(res);
+      // const data=res.data
+      // console.log(data);
+      setquestion(res);
     }
     catch(error){
   console.log(error);
@@ -53,7 +62,7 @@ const Forum = () => {
     };
 
     fetchData();
-  }, []);
+  }, [questionpost, comment]);
 
   return !isLoading ? (
     <section>
@@ -65,13 +74,13 @@ const Forum = () => {
         <div className="listaForum">
           {datasforo.length !== 0
             ? datasforo.map((dataforo, i) => (
-                <CardForum key={i} listadodata={dataforo} />
+                <CardForum key={i} listadodata={dataforo}  refresh={()=>refreshcomment(i)}/>
               ))
             : ""}
           <div className="busqueda">
-            <form onSubmit={createquestion} className="form">
+            <form onSubmit={createquestion} className="form" >
               <input placeholder="Realice pregunta" name="description" />
-              <label for="quantity">Seleccione el Topico</label>
+              <label htmlFor="quantity">Seleccione el Topico</label>
               <select id="quantity" name="Topic">
                 <option value="Nutricion">Nutricion </option>
                 <option value="Legales">Legales </option>
