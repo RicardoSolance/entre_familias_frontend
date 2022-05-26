@@ -14,7 +14,7 @@ const Dashboard = () => {
   const config = {
     readonly: false, // all options from https://xdsoft.net/jodit/doc/,
     height: 500,
-    width:700
+    width:820
   };
 
 
@@ -51,29 +51,40 @@ const Dashboard = () => {
 
   return (
     <section>
-      <h1>Admin Dasboard</h1>
+      <div className="admin-bars">
+      <h1 className="title">Crea nuevo Post</h1>
+      </div>
+      
       <div className="form_container">
         
         <form onSubmit={handleSubmit(createEntry,handleSave)} className='form' >
         <input  {...register("image")} type="text" name="image" id="image" placeholder="Url imagen de portada"/>
-          <input  {...register("title")} type="text" name="title" id="title" placeholder="Titulo del Blog"/>
-          {/* <textarea  {...register("content")} name="content" id="content" cols="30" rows="10" placeholder="Blog content" /> */}
-          <p>Categoria : </p><select {...register("category")} name="category" placeholder="categoria">
+          <input  {...register("title")} type="text" name="title" id="title" placeholder="Titulo del Blog" />
+          <div className="categor">
+          <p>Categoría : </p><select {...register("category")} name="category" placeholder="categoria">
             <option value="acogida">acogida</option>
             <option value="adopcion">adopción</option>
             <option value="eventos">eventos</option>
          </select>
-          <input type="submit" value="Enviar" />
+          </div>
+          
+          {/* <textarea  {...register("content")} name="content" id="content" cols="30" rows="10" placeholder="Blog content" /> */}
+     
+         
           <JoditEditor
             	ref={editor}
                 value={content}
                 config={config}
-                tabIndex={1} // tabIndex of textarea
+                // tabIndex={1} // tabIndex of textarea
                 onBlur={newContent => setContent(newContent)} // preferred to use only this option to update the content for performance reasons
                 onChange={newContent => {}}
             />
 
-      
+          <div className="cat">
+          <input type="submit" value="Enviar"  className="btn"/>
+          
+          </div>
+          
         </form>
        
         
