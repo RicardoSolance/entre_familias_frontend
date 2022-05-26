@@ -42,10 +42,10 @@ const Dashboard = () => {
     setContent('');
   }
 
-  const getContent = () => {
-    setContent(content)
-    console.log('this is the content', content);
-  }
+  // const getContent = () => {
+  //   setContent(content)
+  //   console.log('this is the content', content);
+  // }
 
  
 
