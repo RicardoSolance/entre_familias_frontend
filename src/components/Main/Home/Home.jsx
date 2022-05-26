@@ -16,12 +16,14 @@ const Home = () => {
   return (
     <div>
       <article id="art1">
-        <img src={familias} alt="familias"/>
+        {/* <img src={familias} alt="familias"/> */}
+        <div className="foto-header"></div>
         <div>
           <h1>Entre Familias</h1>
           <p>¡Gracias por formar parte de nuestra comunidad, ayudarnos a conectar, y brindar soporte a familias de acogida!</p>
           <button className="mainBtn" onClick={()=>window.scrollTo(0,0)}><Link to="/maintenance">Mira tu perfil</Link></button>
         </div>
+        
       </article>
       <article id="art2">
         <h1>Únete a nuestra comunidad:</h1>
