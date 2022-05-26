@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+
 import axios from "axios";
 
 import Comment from "./Comment";
@@ -8,7 +8,7 @@ import fotosForo from "../../../../assets/fotosForo.png";
 function CardForum(props) {
 
 const listadodata = props.listadodata
-// const refreshcomment=props.refreshcomment
+
 const createcomment = async (e) => {
     e.preventDefault()
     const questionform = {
