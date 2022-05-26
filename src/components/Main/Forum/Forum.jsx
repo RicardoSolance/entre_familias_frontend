@@ -74,13 +74,13 @@ const Forum = () => {
         <div className="listaForum">
           {datasforo.length !== 0
             ? datasforo.map((dataforo, i) => (
-                <CardForum key={i} listadodata={dataforo} />
+                <CardForum key={i} listadodata={dataforo}  refresh={()=>refreshcomment(i)}/>
               ))
             : ""}
           <div className="busqueda">
-            <form onSubmit={createquestion} className="form" refresh={()=>refreshcomment(i)}>
+            <form onSubmit={createquestion} className="form" >
               <input placeholder="Realice pregunta" name="description" />
-              <label for="quantity">Seleccione el Topico</label>
+              <label htmlFor="quantity">Seleccione el Topico</label>
               <select id="quantity" name="Topic">
                 <option value="Nutricion">Nutricion </option>
                 <option value="Legales">Legales </option>

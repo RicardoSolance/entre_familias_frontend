@@ -11,11 +11,8 @@ import { useForm } from "react-hook-form";
 import Dialog from '@mui/material/Dialog';
 import { userContext } from "../../context/userContext";
 import Alert from '@mui/material/Alert';
-<<<<<<< HEAD
 import {parseCookies,setCookie,getCookie} from "../../utils/cookies"
-=======
 import Hamburger from 'hamburger-react';
->>>>>>> 8f29298f297944ce2e14f417a4ae6ccf15850ebe
 
 
 

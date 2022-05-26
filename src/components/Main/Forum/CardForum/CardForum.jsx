@@ -63,7 +63,7 @@ const createcomment = async (e) => {
     </>
     <form onSubmit={createcomment} className="form">
           <input placeholder="Agregar comentario" name="nombre" />
-          <button type="submit" ></button>
+          <button type="submit" >Enviar Comentario</button>
         </form>
       </div>
 
