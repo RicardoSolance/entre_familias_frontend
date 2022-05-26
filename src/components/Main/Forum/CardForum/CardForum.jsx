@@ -1,9 +1,11 @@
-import React, { useEffect, useState, useContext } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import Comment from "./Comment";
 
-function CardNeas(props) {
+import Comment from "./Comment";
+import fotosForo from "../../../../assets/fotosForo.png";
+
+function CardForum(props) {
 
 const listadodata = props.listadodata
 // const refreshcomment=props.refreshcomment
@@ -43,10 +45,10 @@ const createcomment = async (e) => {
 
   return (
     <div className="card">
-       
-      
-   
-        <p>Topico:{listadodata.Topic}</p>
+      <img src={fotosForo} alt="fotos foro" />
+      <div>
+        <h4>{listadodata.Topic}</h4>
+        <p>{listadodata.postedBy.name}</p>
         <p>Descripcion:{listadodata.description}</p>
         <p>Time:{listadodata.time}</p>
         
@@ -64,9 +66,9 @@ const createcomment = async (e) => {
           <button type="submit" ></button>
         </form>
       </div>
-      
-   
+
+    </div>
   );
 }
 
-export default CardNeas;
+export default CardForum;

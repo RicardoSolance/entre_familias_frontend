@@ -30,8 +30,14 @@ const [inputname, setSearchName] = useState([]);
    
 
 
-      </div>
-   
+
+      <p>Comentarios:{commentdata.answer}</p>
+
+
+
+
+    </div>
+
   );
 }
 

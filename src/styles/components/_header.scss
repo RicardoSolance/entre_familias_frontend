@@ -1,4 +1,4 @@
-header{
+#normalHeader{
     display: column;    
     flex-direction: row;
     flex-wrap: wrap;
@@ -7,7 +7,7 @@ header{
     color: black;
 }
 
-header *, header *:visited{
+#normalHeader *, #normalHeader *:visited{
     text-decoration: none;
 }
 
@@ -58,3 +58,43 @@ header *, header *:visited{
     height: 60px;
     width: 60px;
 }
+
+#burger{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    gap: 10px;
+    width: 260px;
+    background: #FAFAFA;
+    border-radius: 8px;
+    height: 351px;
+    position: absolute;
+    margin-left: 50px;
+    margin-top: 20px;
+    backdrop-filter: blur(4px);
+
+}
+
+
+#burger>a{
+   border-bottom: 1px #EBEBEB solid;
+   width: 80%;
+}
+
+#burgerHeader{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#users_group{
+    height: 24px;
+    width: 24px;
+}
+

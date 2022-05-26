@@ -45,7 +45,7 @@ const Profile = () => {
                 </div>
                 <div className="input-label">
                 <label htmlFor="surname"> Apellidos*</label>
-            <input  {...register('surname')} type="text" name="surname" id="name" className='bg-white'/>
+            <input  {...register('surname')} type="text" name="surname" id="surname" className='bg-white'/>
                 </div>
                 <div className="input-label">
                 <label htmlFor="province"> Provincia*</label>
@@ -197,6 +197,7 @@ const Profile = () => {
             <label htmlFor="parentOneBirth">Fecha de Nacimiento*</label>
             <input {...register('parentOneBirth')} type="date" name="parentOneBirth" id="parentOneBirth" />
           </div>
+          <div className="input-label"></div>
 
           <div className="title-form">
           <h3>Padre 2</h3>
@@ -222,6 +223,7 @@ const Profile = () => {
             <label htmlFor="parentTwoBirth">Fecha de Nacimiento*</label>
             <input {...register('parentTwoBirth')}  type="date" name="parentTwoBirth" id="parentTwoBirth" />
           </div>
+          <div className="input-label"></div>
         </div>
         </div>
 {/*---------------------------------------------------------------------------------  */}
