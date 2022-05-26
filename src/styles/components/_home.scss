@@ -358,6 +358,10 @@ article{
     height: 48px;
  }
 
+ h1,h2{
+     border-bottom: 2px solid #A5EBE2;
+ }
+
  #art1 > div > h1{
      font-size: 32px;
  }
@@ -368,7 +372,7 @@ article{
 
  #art2>img{
     width: 375px;
-    height: 256px;
+    height: 126px;
  }
 
  #art3>div>div{
@@ -379,7 +383,8 @@ article{
  }
 
  #art3>div>img{
-     width: 282px;
+    width: 332px;
+    height: 228px;
  }
 
  #art4 > div{

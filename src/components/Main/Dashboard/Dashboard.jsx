@@ -50,7 +50,7 @@ const Dashboard = () => {
  
 
   return (
-    <section>
+    <section className="sectionDashboard">
       <div className="admin-bars">
       <h1 className="title">Crea nuevo Post</h1>
       </div>
