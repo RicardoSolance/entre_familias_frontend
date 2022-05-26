@@ -15,15 +15,16 @@ const Forum = () => {
   const PER_PAGE = 24;
   const count = Math.ceil(datasforo.length / PER_PAGE);
   const _DATA = usePagination(datasforo, PER_PAGE);
+  const refreshcomment= (value) =>{
+    setcomment(value);
+  }
   const handleChange = (e, p) => {
     setPage(p);
     _DATA.jump(p);
     
   };
 
-  const refreshcomment= (value) =>{
-    setcomment(value);
-  }
+  
 
 
   const createquestion = async (e) => {
