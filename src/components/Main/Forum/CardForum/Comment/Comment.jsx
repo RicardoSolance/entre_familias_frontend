@@ -13,22 +13,10 @@ const commentdata= props.commentdata
 
 
   return (
-    <div className="card">
-       
-       <p>Time:{commentdata.time}</p>
-        <p>nombreComentario:{commentdata.commentBy?.name}</p>
-          <p>Comentarios:{commentdata.answer}</p>
-    
-        
-   
-
-
-
-  
-
-
-
-
+    <div className="cardComment">
+       <p>{commentdata.time.slice(11,16)}</p>
+        <p>{commentdata.commentBy.name}</p>
+          <p>{commentdata.answer}</p>
     </div>
 
   );
