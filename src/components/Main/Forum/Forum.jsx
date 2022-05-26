@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import CardForum from "../Forum/CardForum";
 const Forum = () => {
@@ -6,6 +6,11 @@ const Forum = () => {
   const [datasforo, setSearch] = useState([]);
   const [questionpost, setquestion] = useState(null);
   const [comment, setcomment] = useState(null);
+
+  const refreshcomment= (value) =>{
+    setcomment(value);
+  }
+
 
   const createquestion = async (e) => {
     e.preventDefault();
@@ -21,9 +26,7 @@ const Forum = () => {
       headers: { Authorization: `Bearer ${token}` },
     };
 
-    // const refreshcomment= (newUser) =>{
-    //   setuser(newUser);
-    // }
+  
   
   try{
       const res = await axios.post(
@@ -56,14 +59,14 @@ const Forum = () => {
     };
 
     fetchData();
-  }, [questionpost]);
+  }, [questionpost, comment]);
 
   return !isLoading ? (
     <div className="listaForum">
       <>
         {datasforo.length !== 0
           ? datasforo.map((dataforo, i) => (
-              <CardForum key={i} listadodata={dataforo} />
+              <CardForum key={i} listadodata={dataforo} refresh={()=>refreshcomment(i)}/>
             ))
           : ""}
       </>

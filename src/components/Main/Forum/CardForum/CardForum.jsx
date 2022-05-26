@@ -6,12 +6,8 @@ import Comment from "./Comment";
 function CardNeas(props) {
 
 const listadodata = props.listadodata
-// const listadodataa=props.listadodataa
-// console.log(listadodataa);
-
-  //otra forma es poner props entre parentesis en cards y luego poner copiar ruta del name
-  //props.poke[0].name
-  const createcomment = async (e) => {
+// const refreshcomment=props.refreshcomment
+const createcomment = async (e) => {
     e.preventDefault()
     const questionform = {
       answer: e.target.nombre.value,
@@ -27,9 +23,10 @@ const listadodata = props.listadodata
         questionform, 
         config
       );
-      // const data=res.data
-      // console.log(data);
-       
+  
+      
+     props.refresh(res)
+    
     }
     catch(error){
   console.log(error);

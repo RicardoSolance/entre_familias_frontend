@@ -1,6 +1,6 @@
-import React, { useContext, useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import axios from "axios";
+import React, {  useState,  } from "react";
+
+
 
 
 function Comment(props) {
@@ -9,7 +9,6 @@ function Comment(props) {
 const commentdata= props.commentdata
 const [inputname, setSearchName] = useState([]);
 
-console.log(commentdata);
 // const onSubmit = (e) => {
 //   e.preventDefault();
 //   if(e.target.nombre.value){
