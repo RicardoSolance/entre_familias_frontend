@@ -137,6 +137,7 @@ const Header = () => {
              <label htmlFor="pass1">Contraseña*</label>
              <input {...register("pass1")} name="pass1" type="password" required />
              <label htmlFor="pass2">Repite la contraseña*</label>
+             <p style={{fontWeight:"200", fontSize:"14px"}}>8 caracteres 1 minúscula 1 mayúscula 1 número</p>
              <input {...register("pass2")} name="pass2" type="password" required />
              <label htmlFor="birthday">Fecha de nacimiento*</label>
              <input {...register("birthday")} type="date" name="birthday" required/>
@@ -148,19 +149,41 @@ const Header = () => {
              <button type="submit" className="mainBtn">Registrarme</button>
            </form>)          
          } else {
-           return(
-           <form className="formPopup" onSubmit={handleSubmit(loginUser)}>
-             <img src={logoGrande} alt="logoGrande" />
-             <h2>Empezar</h2>
-             <p>Unete a nuestra comunidad y conecta con familias, profesionales y voluntarios.</p>
-             <label htmlFor="email">Correo electrónico</label>
-             <input {...register("email")} name="email" type="text" />
-             <label htmlFor="pass1">Contraseña</label>
-             <input {...register("pass1")} name="pass1" type="password" />
-             <button className="mainBtn" type="submit">Iniciar Sesión</button>
-             {error ? <Alert severity="error">hubo un error al autenticar, comprueba si los campos son correctos.</Alert> : ""}
-             <button onClick={goToSignUp} className="secondBtn">Hazte miembro</button>
-           </form>)}})()
+           return (
+             <form className="formPopup" onSubmit={handleSubmit(loginUser)}>
+               <img src={logoGrande} alt="logoGrande" />
+               <h2>Empezar</h2>
+               <p>
+                 Unete a nuestra comunidad y conecta con familias, profesionales
+                 y voluntarios.
+               </p>
+               <label htmlFor="email">Correo electrónico</label>
+               <input {...register("email")} name="email" type="text" />
+               <label htmlFor="pass1">Contraseña</label>
+               <input {...register("pass1")} name="pass1" type="password" />
+               <div id="remember">
+                 <div>
+                  <input type="checkbox" name="remember" id="" />
+                  <label style={{fontSize:"14px"}} htmlFor="remember">Recuérdame</label>
+                 </div>
+                 <a style={{fontSize:"14px"}}>¿Has olvidado la contraseña?</a>
+               </div>
+               <button className="mainBtn" type="submit">
+                 Iniciar Sesión
+               </button>
+               {error ? (
+                 <Alert severity="error">
+                   hubo un error al autenticar, comprueba si los campos son
+                   correctos.
+                 </Alert>
+               ) : (
+                 ""
+               )}
+               <button onClick={goToSignUp} className="secondBtn">
+                 Hazte miembro
+               </button>
+             </form>
+           );}})()
            }
      </Dialog>
      <Nav/>
@@ -249,6 +272,7 @@ const Header = () => {
                    required
                  />
                  <label htmlFor="pass2">Repite la contraseña*</label>
+                 <p style={{fontWeight:"200", fontSize:"14px"}}>8 caracteres 1 minúscula 1 mayúscula 1 número</p>
                  <input
                    {...register("pass2")}
                    name="pass2"
@@ -296,6 +320,13 @@ const Header = () => {
                  <input {...register("email")} name="email" type="text" />
                  <label htmlFor="pass1">Contraseña</label>
                  <input {...register("pass1")} name="pass1" type="password" />
+                 <div id="remember">
+                    <div>
+                      <input type="checkbox" name="remember" id="" />
+                      <label style={{fontSize:"14px"}} htmlFor="remember">Recuérdame</label>
+                    </div>
+                    <a style={{fontSize:"14px"}}>¿Has olvidado la contraseña?</a>
+                 </div>
                  <button className="mainBtn" type="submit">
                    Iniciar Sesión
                  </button>
