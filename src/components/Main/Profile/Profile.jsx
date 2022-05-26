@@ -11,7 +11,7 @@ const Profile = () => {
     console.log('this is data', data);
 
     try {
-      await axios.put(`http://localhost:5000/api/users/edit/${data.name}`, data);
+      await axios.put(`https://entre-familias-backend.herokuapp.com/api/users/edit/${data.name}`, data);
       reset()
       
     } catch (error) {
@@ -197,6 +197,7 @@ const Profile = () => {
             <label htmlFor="parentOneBirth">Fecha de Nacimiento*</label>
             <input {...register('parentOneBirth')} type="date" name="parentOneBirth" id="parentOneBirth" />
           </div>
+          <div className="input-label"></div>
 
           <div className="title-form">
           <h3>Padre 2</h3>
@@ -222,6 +223,7 @@ const Profile = () => {
             <label htmlFor="parentTwoBirth">Fecha de Nacimiento*</label>
             <input {...register('parentTwoBirth')}  type="date" name="parentTwoBirth" id="parentTwoBirth" />
           </div>
+          <div className="input-label"></div>
         </div>
         </div>
 {/*---------------------------------------------------------------------------------  */}

@@ -2,7 +2,7 @@ import React from "react";
 
 const Privacy_politics = () => {
   return (
-    <section>
+    <section className="politicsSection">
       <h1>Política de privacidad</h1>
 <h3>DATOS DEL RESPONSABLE DEL TRATAMIENTO DE SUS DATOS</h3>
 Identidad: ASEAF ASOCIACIÓN ESTATAL DE ACOGIMIENTO FAMILIAR POR SUS DERECHOS
