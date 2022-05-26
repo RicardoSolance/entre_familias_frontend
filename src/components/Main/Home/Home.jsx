@@ -6,7 +6,7 @@ import img10 from "../../../assets/img10.png";
 import chatbotImg from "../../../assets/chatbot.png";
 import img8 from "../../../assets/img8.png";
 import img12 from "../../../assets/img12.png";
-import familias from "../../../assets/familias.png";
+// import familias from "../../../assets/familias.png";
 import imgText from "../../../assets/imgText.png";
 import { Link } from "react-router-dom";
 

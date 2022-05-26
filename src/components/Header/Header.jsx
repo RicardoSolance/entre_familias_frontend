@@ -11,7 +11,11 @@ import { useForm } from "react-hook-form";
 import Dialog from '@mui/material/Dialog';
 import { userContext } from "../../context/userContext";
 import Alert from '@mui/material/Alert';
-import {parseCookies,setCookie,getCookie} from "../../utils/cookies"
+import {
+  // parseCookies,
+  setCookie
+  // ,getCookie
+} from "../../utils/cookies"
 import Hamburger from 'hamburger-react';
 
 
@@ -101,7 +105,7 @@ const Header = () => {
        <Link to="/maintenance"><img src={voluntariadoLogo} alt="voluntariado logo"/></Link>
        {user?
        <div>
-         <a onClick={handleOpen2}>{user}</a>
+         <a style={{color:"white"}} onClick={handleOpen2}>{user}</a>
          <p style={{cursor:"pointer"}} onClick={logout}>Cerrar sesión</p>
        </div>
        :
