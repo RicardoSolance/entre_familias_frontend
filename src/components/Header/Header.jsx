@@ -26,19 +26,19 @@ const Header = () => {
   const [error, seterror] = useState(false);
   const [passWeak, setpassWeak] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-  const [windowWidth, setWindowWidth] = useState("");
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   const detectSize = () => {
     setWindowWidth(window.innerWidth);
   }
 
   useEffect(() => {
-    window.addEventListener('resize', detectSize)
+    window.addEventListener('resize', detectSize);
 
     return () => {
       window.removeEventListener('resize', detectSize)
     }
-  }, [windowWidth]);
+  }, []);
 
 
  
@@ -96,7 +96,8 @@ const Header = () => {
     setchangeToSignUp(true);
   }
 
-  return windowWidth>911?      (
+  if (windowWidth>911) {
+    return (
     <header id="normalHeader">
      <div id="divLogos">
        <Link to="/maintenance"><img src={voluntariadoLogo} alt="voluntariado logo"/></Link>
@@ -166,7 +167,8 @@ const Header = () => {
      </Dialog>
      <Nav/>
    </header>
- ) : (
+ )} else{
+   return(
     <header id="burgerHeader">
       <Hamburger toggled={isOpen} toggle={setIsOpen} className="hamburger-component"/>
         {isOpen?
@@ -185,5 +187,5 @@ const Header = () => {
       </header>
       )
 };
-
+}
 export default Header;
