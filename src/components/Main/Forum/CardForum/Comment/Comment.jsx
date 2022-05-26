@@ -22,16 +22,16 @@ const [inputname, setSearchName] = useState([]);
   return (
     <div className="card">
        
-      
-          <p>Comentarios:{commentdata.answer}</p>
-          <p>Time:{commentdata.time}</p>
+       <p>Time:{commentdata.time}</p>
         <p>nombreComentario:{commentdata.commentBy?.name}</p>
+          <p>Comentarios:{commentdata.answer}</p>
+    
         
    
 
 
 
-      <p>Comentarios:{commentdata.answer}</p>
+  
 
 
 
