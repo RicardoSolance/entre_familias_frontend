@@ -9,7 +9,8 @@ import JoditEditor from "jodit-react";
 const Dashboard = () => {
   const { register, handleSubmit, reset } = useForm();
   const editor = useRef(null)
-	const [content, setContent] = useState('')
+  const [content, setContent] = useState('')
+  const [visibility, setVisibility] = useState(false);
 
   const config = {
     readonly: false, // all options from https://xdsoft.net/jodit/doc/,
