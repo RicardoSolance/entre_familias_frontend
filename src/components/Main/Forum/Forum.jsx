@@ -5,7 +5,7 @@ import CardForum from "../Forum/CardForum";
 import CircularProgress from '@mui/material/CircularProgress';
 import usePagination from "../../../hooks/paginate";
 import Pagination from '@mui/material/Pagination';
-import categorias from "../../../assets/categoria.png";
+import categorias from "../../../assets/Categoria.png";
 
 const Forum = () => {
   const [isLoading, setIsLoading] = useState(false);
