@@ -10,6 +10,7 @@
     align-content: center;
     justify-content: center;
     align-items: center;
+    margin-left: 40px;
 
 }
 
@@ -33,7 +34,7 @@ section>div>h2{
     min-width: 620px;
     flex-direction: row;
     align-content: center;
-    justify-content: space-evenly;
+    // justify-content: space-evenly;
 }
 
 .card{
@@ -118,11 +119,9 @@ section>div>h2{
 
 @media only screen and (max-width: 450px){
     #divForum{
-        flex-direction: column;
-        align-content: center;
-        justify-content: space-evenly;
-        align-items: center;
+        
         flex-wrap: wrap;
+        max-width: 350px;
     }
     .sectionForum,.sectionForum>*{
         max-width: 350px;
@@ -130,6 +129,6 @@ section>div>h2{
 
     .listaForum{
         max-width: 350px;
-   
+        margin: 0;
     }
 }
